@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Услуги — Инжиниринг систем безопасности</title>
-  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
+  <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
@@ -26,47 +29,39 @@
             "border-dark": "#374151"
           },
           fontFamily: { display: ["Inter", "sans-serif"] },
-          borderRadius: {
-            DEFAULT: "0.5rem",
-            lg: "0.75rem",
-            xl: "1rem",
-            full: "9999px"
-          }
+          borderRadius: { DEFAULT:"0.5rem", lg:"0.75rem", xl:"1rem", full:"9999px" }
         }
       }
     }
   </script>
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-  </style>
+  <style>body{font-family:'Inter',sans-serif}</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
-  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-    <!-- Header (shared) -->
-    <header class="sticky top-0 z-50 border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-      <div class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-          <a href="index.html" class="flex items-center gap-3">
-            <span class="size-6 text-primary inline-flex">
-              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6">
-                <path d="M12 1.5L2 7.5V16.5L12 22.5L22 16.5V7.5L12 1.5ZM4 8.6L12 13.2L20 8.6L12 4L4 8.6ZM12 14.8L4 10.2V15.4L12 20.1V14.8ZM14 20.1L20 15.4V10.2L12 14.8L14 20.1Z"></path>
-              </svg>
-            </span>
-            <span class="text-base sm:text-lg font-bold">Инжиниринг систем безопасности</span>
+  <div class="min-h-screen flex flex-col">
+
+    <!-- Header (единый) -->
+    <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10 border-b border-border-light dark:border-border-dark">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="index.html" class="flex items-center">
+            <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 1.5L2 7.5V16.5L12 22.5L22 16.5V7.5L12 1.5ZM4 8.6L12 13.2L20 8.6L12 4L4 8.6ZM12 14.8L4 10.2V15.4L12 20.1V14.8ZM14 20.1L20 15.4V10.2L12 14.8L14 20.1Z"></path>
+            </svg>
+            <span class="ml-3 text-xl font-bold">Инжиниринг систем безопасности</span>
           </a>
 
           <!-- Desktop nav -->
-          <nav class="hidden md:flex items-center gap-6">
+          <nav class="hidden md:flex items-center space-x-8">
             <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">О нас</a>
-            <a class="text-sm font-medium hover:text-primary transition-colors" href="services.html">Услуги</a>
+            <a class="text-sm font-bold text-primary" href="services.html">Услуги</a>
             <a class="text-sm font-medium hover:text-primary transition-colors" href="projects.html">Проекты</a>
             <a class="text-sm font-medium hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
             <a class="text-sm font-medium hover:text-primary transition-colors" href="contacts.html">Контакты</a>
           </nav>
 
-          <div class="hidden md:flex items-center gap-3">
-            <a href="contacts.html#contact-form" class="rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-colors">
-              Заказать коммерческое предложение
+          <div class="hidden md:flex items-center">
+            <a href="contacts.html#contact-form" class="bg-primary text-white font-bold py-2 px-4 rounded-lg text-sm hover:bg-primary/90 transition-colors">
+              Запросить КП
             </a>
           </div>
 
@@ -82,9 +77,9 @@
 
       <!-- Mobile nav -->
       <nav id="mobileNav" class="md:hidden hidden border-t border-border-light dark:border-border-dark">
-        <div class="mx-auto max-w-[1200px] px-4 py-3 flex flex-col gap-2">
+        <div class="max-w-[1200px] mx-auto px-4 py-3 flex flex-col gap-2">
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="about.html">О нас</a>
-          <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="services.html">Услуги</a>
+          <a class="py-2 text-sm font-bold text-primary" href="services.html">Услуги</a>
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="projects.html">Проекты</a>
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="contacts.html">Контакты</a>
@@ -93,220 +88,137 @@
       </nav>
     </header>
 
+    <!-- Main -->
     <main class="flex-grow">
-      <!-- Title -->
-      <section class="relative">
-        <div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_services_hero");'></div>
-        <div class="absolute inset-0 bg-black/50"></div>
-        <div class="relative mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 py-20 text-white">
-          <h1 class="text-4xl sm:text-5xl font-black leading-tight tracking-tight">Услуги</h1>
-          <p class="mt-3 max-w-3xl text-white/90">Полный цикл работ: обследование, проектирование, монтаж, пусконаладка и обслуживание систем безопасности.</p>
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 class="text-4xl font-extrabold mb-12">Наши услуги</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <!-- 1 -->
+          <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
+            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOa1DI9NL-zNZ7t9xrQgXYgBarw3o2S0o_gKJD_kV4pnEsFEesOC9O9meH5JhS9yIZOM_3QI2DR4WAKEPAOBhWK9f_QSToUaVWgHnMo-RO4Bj1TujOO8r7vS20MnhPPLH0mu6DSAh7hsdDyJyTHNAqUjAAw0IpEMqCkfCM7yF_QIZP68Yh1lJnYyBWG_T_0byXgfzrhqMFesJS8-ZBwMhaLLg-6hidJTQENibJH1mcFCuyvnzpwcseaz9kM08dUagJQzZrgOXoRffU");'>
+              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h3 class="text-lg font-bold mb-2">Проектирование систем пожарной безопасности</h3>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Комплексное проектирование систем пожарной безопасности для зданий и сооружений.</p>
+              <a class="mt-4 text-sm font-bold text-primary hover:underline" href="contacts.html#contact-form">Подробнее →</a>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
+            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuAt4zt69pqKkuC-LcZdA3T36-ElXuaFI1O-SFr0DbAjLq8q499MB1JvLSsGyKvsUjwdP9YRRkdm2MMXj0PF08RinE4lcbaTLU31n884UOfu_lqAgZD5MV3uY8FTwZCT46f7u-MjJk_ZPIJTmj-ORRvlYjHFDP0v9CNRdj2RhUrG883oyH8HY1oUCQLjNLuAkrmqO98dY9P9abOp4aOOMUJktgU9PlSwcO9o3iupHQh2y9Bg_4mW2tquNu3BRmxw3Zv1cbbWOBauyz98");'>
+              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h3 class="text-lg font-bold mb-2">Проектирование охранной сигнализации</h3>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование систем охранной сигнализации для защиты от несанкционированного доступа.</p>
+              <a class="mt-4 text-sm font-bold text-primary hover:underline" href="contacts.html#contact-form">Подробнее →</a>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
+            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIG_KLrGdZuGI1M83GRuUv1Oe_sxRjYUmVr6PpFWFviR1c6mNCQk4l8oLo4R9pGO_jC99xDVSkEofrmeZR__quKt2ZQDCz9RSJt_8Vjh-CNOyszbHnr_Y-J523KKlHspMXYdNWATmjhqu4datAbSPGt7EfmdyJejnUzIoCaV75Svo5wcRWh-gLW-IiELbr1feHA6NjgnmDKBNtiJQ74BLxSCTj8gi9u0NbRTbeO-WLVYHkJepvvcOHtwIiYzfaKQsQHahmoAANHdxr");'>
+              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h3 class="text-lg font-bold mb-2">Проектирование систем контроля доступа</h3>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование СКУД для управления и мониторинга точек входа.</p>
+              <a class="mt-4 text-sm font-bold text-primary hover:underline" href="contacts.html#contact-form">Подробнее →</a>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
+            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-3C4ZRT4IaGC2Ghuj3cFcUaFiNpUVpUZJN7JPt8gMMIvNkKF1b4lIEZyRkMFElKcla1G1PDeTH164TQ959I4IIgtBHO0ggH73yuuJ2re7rPl2PVd7OEaWVHgPH0QdQHbzjqUgOkP87aKd-kESMi99qMjhiQwdGmuh5t7B_zTOWH9Gc5jSIjsd6zVZInY8Ae_EVwJhqZfFRtne2888ZZ1qQBdJr5VQh4-5casQaIAzxNOtxHhMWEeDjrUyJZMd92OQopjs4i30mhAD");'>
+              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h3 class="text-lg font-bold mb-2">Проектирование систем видеонаблюдения</h3>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование систем видеонаблюдения для мониторинга и записи.</p>
+              <a class="mt-4 text-sm font-bold text-primary hover:underline" href="contacts.html#contact-form">Подробнее →</a>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
+            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJVd-fgx3iA7rJNQxkAPEgEbJZtJP2uybTPBe3WxTsjXGuva99XD30lv-Y7KEZ8Qbglgx8twyANcGftXRq17MP591NuDD5WNoxotrYObT6F8Tdc1VB8WU9W8CbaeHjNqgzPi2Kvf6DGdKSFei8-ZbdVnj4Q175EcЗ4p67I7Bh0zo02ILhX4Wzp3idWsONHPwkN_sW6HwVwqn7zipMBfKIScAT8y1SInn9LmFuGwMYuDk9-qXsggiSam1YtsSeeeFZYVvYC1_R0jUlg");'>
+              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h3 class="text-lg font-bold mb-2">Проектирование интегрированных систем</h3>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование интегрированных систем безопасности, объединяющих различные подсистемы.</p>
+              <a class="mt-4 text-sm font-bold text-primary hover:underline" href="contacts.html#contact-form">Подробнее →</a>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
+            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9PKNbFZ8CgltP5fqqb8fdh0caKXwzMt4lv-CQ3aYw93v-9ttzQ8Mj52wq-p5PG2dFIMz2oQB51W_CrX6xNWlgReigQHa-5lUxY55UwWdi_QUyX5girB8FURgCDl-ewzI697Rsetc1WY_0hnxAYYPmuRjntXRngdCciXjwaoGG26bk2cGYJ-vj9iC60Hs93qGXZ77WMwgzZh5KF3MRha861L5NoHMLpNEThc9ia9939BOz7z8-2wfvZvi_2DfYnZoFpg7b9q33X6Rn");'>
+              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h3 class="text-lg font-bold mb-2">Проектирование охраны периметра</h3>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование систем охраны периметра для защиты внешних границ объекта.</p>
+              <a class="mt-4 text-sm font-bold text-primary hover:underline" href="contacts.html#contact-form">Подробнее →</a>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
+            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuCr1lW9Z4QjPe-ziFmsзG3xNzJk85jsi6Jj4qBvhWnru3_t_jyIqNOuOPeKz3K9SXqtWH-8mJTIchQwkZZKM6jasl3ClfmBkBRcOG8uLiX5daWXtp7rF8hsF1kRt4a1BjAfQwa9pHIxKN_xPr3Z6yrv7aP55aHGqpMylkzFIxi9kI232oaLgZTdJEWDSQjMbCZ6O_x0ck2sq8UzjjqCI7JlXAKW-r_0fh4Zz1SwRK54H0PgvFeZInVrLHtnmxgmvSHV23y-xTb1fzfJ");'>
+              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h3 class="text-lg font-bold mb-2">Проектирование систем пожаротушения</h3>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование систем пожаротушения, включая спринклерные и другие типы.</p>
+              <a class="mt-4 text-sm font-bold text-primary hover:underline" href="contacts.html#contact-form">Подробнее →</a>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
+            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdBF02Hw9T-W0a06cie40jU5BLCi5HdTTI6NlBZuG7PeeZUTFBpClseXYGny8GiSpHlzbUqQ5Rb8GmCBxH61gvjXcZJ9bABHC5Y2KpcTkPuwyUA8qyKekKHf3K7hQN1h4ffS7pELh6hI3KCheJzXVYNclpy9E9v_8sS2QxTJpo2y9nqjdeL87ESZdEMplUzOdrejFxoYp_wZby5rPmHd7X7vRmaeRxwbRF-eGrq2AE4DI5RzSQySDVcPQ3cZvqxWgfif-TdGQn7338");'>
+              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <h3 class="text-lg font-bold mb-2">Проектирование систем дымоудаления</h3>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование систем дымоудаления для удаления дыма при пожаре.</p>
+              <a class="mt-4 text-sm font-bold text-primary hover:underline" href="contacts.html#contact-form">Подробнее →</a>
+            </div>
+          </article>
         </div>
-      </section>
-
-      <!-- Services grid -->
-      <section id="list" class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-[1200px]">
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            <!-- Service card -->
-            <article class="rounded-lg border border-border-light dark:border-border-dark p-6 bg-white/60 dark:bg-white/5">
-              <h2 class="text-xl font-bold">Аудит и обследование объектов</h2>
-              <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">Выезд на объект, анализ рисков, опросные листы, предварительные решения и сметы.</p>
-              <ul class="mt-4 list-disc pl-5 text-sm text-subtle-light dark:text-subtle-dark space-y-1">
-                <li>Техническое задание, опросные листы</li>
-                <li>Схемы размещения оборудования</li>
-                <li>Предварительная смета и сроки</li>
-              </ul>
-            </article>
-
-            <article class="rounded-lg border border-border-light dark:border-border-dark p-6 bg-white/60 dark:bg-white/5">
-              <h2 class="text-xl font-bold">Проектирование</h2>
-              <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">Рабочая и исполнительная документация в соответствии со СТБ/ГОСТ и локальными нормами.</p>
-              <ul class="mt-4 list-disc pl-5 text-sm text-subtle-light dark:text-subtle-dark space-y-1">
-                <li>Спецификации, кабельные журналы</li>
-                <li>Планы, развертки, схемы</li>
-                <li>Сметы, графики работ</li>
-              </ul>
-            </article>
-
-            <article class="rounded-lg border border-border-light dark:border-border-dark p-6 bg-white/60 dark:bg-white/5">
-              <h2 class="text-xl font-bold">Монтаж и пусконаладка</h2>
-              <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">Монтаж, настройка и тестирование оборудования с последующей сдачей объекта.</p>
-              <ul class="mt-4 list-disc pl-5 text-sm text-subtle-light dark:text-subtle-dark space-y-1">
-                <li>Кабельные трассы, коммутация</li>
-                <li>Пусконаладочные работы и тесты</li>
-                <li>Обучение персонала</li>
-              </ul>
-            </article>
-
-            <article class="rounded-lg border border-border-light dark:border-border-dark p-6 bg-white/60 dark:bg-white/5">
-              <h2 class="text-xl font-bold">Техническое обслуживание</h2>
-              <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">Регламентные работы, аварийные выезды, SLA и мониторинг состояния систем.</p>
-              <ul class="mt-4 list-disc pl-5 text-sm text-subtle-light dark:text-subtle-dark space-y-1">
-                <li>Плановые осмотры и чистка</li>
-                <li>Проверка журналов событий</li>
-                <li>Отчётность с фото/видео</li>
-              </ul>
-            </article>
-
-            <article class="rounded-lg border border-border-light dark:border-border-dark p-6 bg-white/60 dark:bg-white/5">
-              <h2 class="text-xl font-bold">Интеграция подсистем</h2>
-              <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">Единый пульт управления: CCTV, СКУД, ОПС, оповещение, периметр, серверная.</p>
-              <ul class="mt-4 list-disc pl-5 text-sm text-subtle-light dark:text-subtle-dark space-y-1">
-                <li>Сценарии реагирования</li>
-                <li>Аналитика и отчёты</li>
-                <li>API и обмен данными</li>
-              </ul>
-            </article>
-
-            <article class="rounded-lg border border-border-light dark:border-border-dark p-6 bg-white/60 dark:bg-white/5">
-              <h2 class="text-xl font-bold">Поставка оборудования</h2>
-              <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">Подбор компонентов под требования, поставка и гарантийная поддержка.</p>
-              <ul class="mt-4 list-disc pl-5 text-sm text-subtle-light dark:text-subtle-dark space-y-1">
-                <li>Сравнение производителей</li>
-                <li>Оптимизация бюджета</li>
-                <li>Официальная гарантия</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Subsystems tabs (static) -->
-      <section id="subsystems" class="bg-primary/5 dark:bg-primary/10 py-16 px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-[1200px]">
-          <h2 class="text-3xl font-bold tracking-tight text-center">Подсистемы безопасности</h2>
-          <p class="mt-2 text-lg text-subtle-light dark:text-subtle-dark text-center">Основные направления, которые мы проектируем и обслуживаем.</p>
-
-          <div class="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            <div class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <h3 class="font-bold">CCTV (видеонаблюдение)</h3>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">IP-камеры, NVR/серверы, анализ видео, хранение, отказоустойчивость.</p>
-            </div>
-            <div class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <h3 class="font-bold">СКУД</h3>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Контроллеры, считыватели, турникеты, интеграции, анти-passback.</p>
-            </div>
-            <div class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <h3 class="font-bold">ОПС и пожарная</h3>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Датчики, оповещение, эвакуационные сценарии, исполнительная документация.</p>
-            </div>
-            <div class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <h3 class="font-bold">Периметр</h3>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Инженерные рубежи, вибросенсоры, интеграция с CCTV и оповещением.</p>
-            </div>
-            <div class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <h3 class="font-bold">Серверная/сети</h3>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">PoE-коммутация, резервирование, ИБП, мониторинг, безопасность сети.</p>
-            </div>
-            <div class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <h3 class="font-bold">Интеграция</h3>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Единые журналы, сценарии, API, панель управления.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Process -->
-      <section id="process" class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-[1200px]">
-          <h2 class="text-3xl font-bold tracking-tight text-center">Как мы работаем</h2>
-          <div class="mt-10 grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <div class="text-sm font-bold text-primary">Шаг 1</div>
-              <h3 class="mt-1 font-bold">Обследование</h3>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Выезд, опросные листы, схема объекта.</p>
-            </div>
-            <div class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <div class="text-sm font-bold text-primary">Шаг 2</div>
-              <h3 class="mt-1 font-bold">Проект</h3>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Документация, спецификации, смета.</p>
-            </div>
-            <div class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <div class="text-sm font-bold text-primary">Шаг 3</div>
-              <h3 class="mt-1 font-bold">Монтаж</h3>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Кабельные работы, настройка, обучение.</p>
-            </div>
-            <div class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <div class="text-sm font-bold text-primary">Шаг 4</div>
-              <h3 class="mt-1 font-bold">Сервис</h3>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Регламент, аварийные выезды, SLA.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section id="faq" class="bg-primary/5 dark:bg-primary/10 py-16 px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-[1200px]">
-          <h2 class="text-3xl font-bold tracking-tight text-center">Частые вопросы</h2>
-          <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <details class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <summary class="cursor-pointer font-bold">Работаете по СТБ/ГОСТ?</summary>
-              <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">Да, документация и решения соответствуют действующим стандартам.</p>
-            </details>
-            <details class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <summary class="cursor-pointer font-bold">Берёте обслуживание без монтажа?</summary>
-              <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">Да, после аудита состояния систем и согласования регламента.</p>
-            </details>
-            <details class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <summary class="cursor-pointer font-bold">Сроки проекта?</summary>
-              <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">Зависят от масштаба объекта; предоставляем график работ и контрольные точки.</p>
-            </details>
-            <details class="rounded-lg border border-border-light dark:border-border-dark p-6">
-              <summary class="cursor-pointer font-bold">Есть гарантия?</summary>
-              <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">Да, на работы и поставленное оборудование — согласно договору и производителям.</p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-[1200px] rounded-xl border border-border-light dark:border-border-dark p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <h3 class="text-2xl font-bold">Нужен проект «под ключ»?</h3>
-            <p class="mt-1 text-subtle-light dark:text-subtle-dark">От обследования и проекта до монтажа и обслуживания.</p>
-          </div>
-          <a href="contacts.html#contact-form" class="inline-flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:bg-primary/90 transition-colors">Запросить КП</a>
-        </div>
-      </section>
+      </div>
     </main>
 
-    <!-- Footer (shared) -->
-    <footer class="border-t border-border-light dark:border-border-dark py-10 px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-[1200px] flex flex-col md:flex-row items-center justify-between gap-6">
-        <a href="index.html" class="flex items-center gap-3">
-          <span class="size-6 text-primary inline-flex">
-            <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6">
-              <path d="M12 1.5L2 7.5V16.5L12 22.5L22 16.5V7.5L12 1.5ZM4 8.6L12 13.2L20 8.6L12 4L4 8.6ZM12 14.8L4 10.2V15.4L12 20.1V14.8ZM14 20.1L20 15.4V10.2L12 14.8L14 20.1Z"></path>
-            </svg>
-          </span>
-          <span class="text-lg font-bold">Инжиниринг систем безопасности</span>
-        </a>
-        <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="about.html">О нас</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="services.html">Услуги</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="projects.html">Проекты</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html">Контакты</a>
-        </nav>
-        <p class="text-sm text-subtle-light dark:text-subtle-dark text-center md:text-right">© 2025 Инжиниринг систем безопасности. Все права защищены.</p>
-      </div>
-      <div class="mx-auto max-w-[1200px] mt-6 text-center text-xs text-subtle-light dark:text-subtle-dark">
-        <p>УНП 123456789. г. Минск, ул. Примерная, 1, офис 101.</p>
+    <!-- Footer (единый) -->
+    <footer class="border-t border-border-light dark:border-border-dark bg-background-light/60 dark:bg-background-dark/60">
+      <div class="max-w-[1200px] mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 md:order-2">
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="about.html">О нас</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="services.html">Услуги</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="projects.html">Проекты</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html">Контакты</a>
+          </nav>
+          <p class="text-sm text-subtle-light dark:text-subtle-dark md:order-1">© 2025 Инжиниринг систем безопасности. Все права защищены.</p>
+        </div>
+        <div class="mt-6 text-center text-xs text-subtle-light dark:text-subtle-dark">
+          <p>УНП 123456789. г. Минск, ул. Примерная, 1, офис 101.</p>
+        </div>
       </div>
     </footer>
   </div>
 
   <script>
-    // Simple mobile menu toggle (no dependencies)
+    // Мобильное меню (единое для сайта)
     const menuBtn = document.getElementById('menuBtn');
     const mobileNav = document.getElementById('mobileNav');
     if (menuBtn && mobileNav) {
-      menuBtn.addEventListener('click', () => {
-        mobileNav.classList.toggle('hidden');
-      });
+      menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
     }
   </script>
 </body>
