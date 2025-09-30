@@ -34,22 +34,12 @@
       }
     }
   </script>
-  <style>
-    body{font-family:'Inter',sans-serif}
-    .ph{
-      position:relative;
-      background: radial-gradient(120% 120% at 80% 0%, rgba(13,57,89,.18), rgba(13,57,89,.45));
-    }
-    .ph svg{
-      position:absolute; inset:0; margin:auto; width:56px; height:56px; color:#fff;
-      filter: drop-shadow(0 3px 10px rgba(0,0,0,.25));
-    }
-  </style>
+  <style>body{font-family:'Inter',sans-serif}</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
   <div class="min-h-screen flex flex-col">
 
-    <!-- Header -->
+    <!-- Header (единый) -->
     <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10 border-b border-border-light dark:border-border-dark">
       <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
@@ -62,11 +52,12 @@
             <span class="text-base sm:text-lg font-bold">Инжиниринг систем безопасности</span>
           </a>
 
+          <!-- Desktop nav -->
           <nav class="hidden md:flex items-center gap-6">
             <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">О нас</a>
             <a class="text-sm font-medium hover:text-primary transition-colors" href="services.html">Услуги</a>
             <a class="text-sm font-bold text-primary" href="projects.html">Проекты</a>
-            <a class="text-sm font-medium hover:text-primary transition-colors" href="certifications.html">Сертификаты</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
             <a class="text-sm font-medium hover:text-primary transition-colors" href="contacts.html">Контакты</a>
           </nav>
 
@@ -76,6 +67,7 @@
             </a>
           </div>
 
+          <!-- Mobile menu button -->
           <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 border border-border-light dark:border-border-dark">
             <span class="sr-only">Открыть меню</span>
             <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" aria-hidden="true">
@@ -85,12 +77,13 @@
         </div>
       </div>
 
+      <!-- Mobile nav -->
       <nav id="mobileNav" class="md:hidden hidden border-t border-border-light dark:border-border-dark">
         <div class="max-w-[1200px] mx-auto px-4 py-3 flex flex-col gap-2">
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="about.html">О нас</a>
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="services.html">Услуги</a>
           <a class="py-2 text-sm font-bold text-primary" href="projects.html">Проекты</a>
-          <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="certifications.html">Сертификаты</a>
+          <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="contacts.html">Контакты</a>
           <a class="py-2 text-sm font-bold text-white bg-primary rounded-lg text-center hover:bg-primary/90 transition-colors" href="contacts.html#contact-form">Запросить КП</a>
         </div>
@@ -102,6 +95,8 @@
       <section class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <h1 class="text-4xl font-extrabold">Наши проекты</h1>
+
+          <!-- Псевдо-фильтры (без JS; можно прикрутить позже) -->
           <div class="flex flex-wrap gap-2">
             <span class="rounded-full bg-primary px-4 py-2 text-sm font-medium text-white">Все</span>
             <span class="rounded-full border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-2 text-sm font-medium text-subtle-light dark:text-subtle-dark">Видео-наблюдение</span>
@@ -110,140 +105,120 @@
           </div>
         </div>
 
+        <!-- Cards -->
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <!-- 1 -->
           <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5 relative">
-              <img class="js-img absolute inset-0 h-full w-full object-cover"
-                   data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2I5IuIx1fg-rfPLk2zMSyuDohI_ZcxTrEe4lXTX2aI814qk4L1z3gxsb_S2THC48vnIkxdY-pu6CLEINH_fMYIcv4KpoStRwUmo4J8Myp_1vL3VMI0qYdCly7M9kSBUpVagJ9Jd9vFQonvZIJBhQt8JJIumy6qWG-fMYBS2_dxm_oZhm9Sccvl3Up3uOEIT0stumoT25EtmWBBjwhefxxnL2xP3mgL9dZ5zk3cYWCg0TBMkJBtwTkfHDf160Fi9d3lMdhkQxzo3lF"
-                   alt="Бизнес-центр «Аврора» — видеонаблюдение"/>
-              <div class="js-fallback hidden ph absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5a2 2 0 0 0-2-2H5C3.9 3 3 3.9 3 5v14l4-4h12l2 2z"/></svg>
-              </div>
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2I5IuIx1fg-rfPLk2zMSyuDohI_ZcxTrEe4lXTX2aI814qk4L1z3gxsb_S2THC48vnIkxdY-pu6CLEINH_fMYIcv4KpoStRwUmo4J8Myp_1vL3VMI0qYdCly7M9kSBUpVagJ9Jd9vFQonvZIJBhQt8JJIumy6qWG-fMYBS2_dxm_oZhm9Sccvl3Up3uOEIT0stumoT25EtmWBBjwhefxxnL2xP3mgL9dZ5zk3cYWCg0TBMkJBtwTkfHDf160Fi9d3lMdhkQxzo3lF" alt="Бизнес-центр «Аврора» — видеонаблюдение"/>
             </div>
-            <div class="p-6">
-              <p class="text-sm font-semibold text-primary">Объект: Бизнес-центр «Аврора»</p>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Москва, 2023</p>
-              <dl class="mt-4 space-y-2 text-sm">
-                <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Модернизация системы видеонаблюдения.</dd></div>
-                <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Установка IP-камер высокого разрешения.</dd></div>
-                <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Повышение уровня безопасности на 90%.</dd></div>
-              </dl>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: Бизнес-центр «Аврора»</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Москва, 2023</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Модернизация системы видеонаблюдения.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Установка IP-камер высокого разрешения.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Повышение уровня безопасности на 90%.</dd></div>
+                </dl>
+              </div>
             </div>
           </article>
 
           <!-- 2 -->
           <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5 relative">
-              <img class="js-img absolute inset-0 h-full w-full object-cover"
-                   data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO5KffYorhfmkoQJpRqqFV8ivbCcXBWv_2McUpElvIvDG5nkeLkLv4afwxcE7jG1G6VSawkOL6-6ynkxkceLqZnZyrwca30-hRdzfmzJJKyTuQ-mJ1rhZN2cmsauqzOpArmB2Ri0jQvYObRI_ezufQf86JVeaf_kM7suXaWgP_agSRbc-8qDFQPLbn-L8XBfWrU4kpfg_EYMFN-zZQTBf3K8nlD-VoMxJCynFnopNIM-Xo94JvlwdR7jPvfAq5ZX2Dp3Pfe_o3ACkf"
-                   alt="ЖК «Невский Бриз» — интеграция СКУД и домофонии"/>
-              <div class="js-fallback hidden ph absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5a2 2 0 0 0-2-2H5C3.9 3 3 3.9 3 5v14l4-4h12l2 2z"/></svg>
-              </div>
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO5KffYorhfmkoQJpRqqFV8ivbCcXBWv_2McUpElvIvDG5nkeLkLv4afwxcE7jG1G6VSawkOL6-6ynkxkceLqZnZyrwca30-hRdzfmzJJKyTuQ-mJ1rhZN2cmsauqzOpArmB2Ri0jQvYObRI_ezufQf86JVeaf_kM7suXaWgP_agSRbc-8qDFQPLbn-L8XBfWrU4kpfg_EYMFN-zZQTBf3K8nlD-VoMxJCynFnopNIM-Xo94JvlwdR7jPvfAq5ZX2Dp3Pfe_o3ACkf" alt="ЖК «Невский Бриз» — интеграция СКУД и домофонии"/>
             </div>
-            <div class="p-6">
-              <p class="text-sm font-semibold text-primary">Объект: ЖК «Невский Бриз»</p>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Санкт-Петербург, 2022</p>
-              <dl class="mt-4 space-y-2 text-sm">
-                <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Интеграция СКУД и домофонии.</dd></div>
-                <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">IP-домофония с контролем доступа.</dd></div>
-                <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Единая система управления доступом.</dd></div>
-              </dl>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: ЖК «Невский Бриз»</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Санкт-Петербург, 2022</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Интеграция СКУД и домофонии.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">IP-домофония с контролем доступа.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Единая система управления доступом.</dd></div>
+                </dl>
+              </div>
             </div>
           </article>
 
           <!-- 3 -->
           <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5 relative">
-              <img class="js-img absolute inset-0 h-full w-full object-cover"
-                   data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Z_6Y62CsxFCku9J3aCj6B3f3hHXr8yQJLj_dOJxncqx_hjpvARXmLcSuUsfuRy3ykLPYlmCCsqfw4knWYx0STp7Y4qT5zWAGLLEhtDRvZHCfMnfRYneduMlpjcZ11KBG6ZL_khzAm501OeZzyGUKH40td2zxCKT-ssXCIMLAB3E4FsgvBE8jDJP5ImNMwradnFxiKfzizwdWHmRCIvDBwoDVuHbSfT4YA-djEFShFzRM_hHwNHeOG02-jNKyuXGiGHZZYMYV9lm0"
-                   alt="Завод «Технопром» — организация ОПС"/>
-              <div class="js-fallback hidden ph absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5a2 2 0 0 0-2-2H5C3.9 3 3 3.9 3 5v14l4-4h12l2 2z"/></svg>
-              </div>
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Z_6Y62CsxFCku9J3aCj6B3f3hHXr8yQJLj_dOJxncqx_hjpvARXmLcSuUsfuRy3ykLPYlmCCsqfw4knWYx0STp7Y4qT5zWAGLLEhtDRvZHCfMnfRYneduMlpjcZ11KBG6ZL_khzAm501OeZzyGUKH40td2zxCKT-ssXCIMLAB3E4FsgvBE8jDJP5ImNMwradnFxiKfzizwdWHmRCIvDBwoDVuHbSfT4YA-djEFShFzRM_hHwNHeOG02-jNKyuXGiGHZZYMYV9lm0" alt="Завод «Технопром» — организация ОПС"/>
             </div>
-            <div class="p-6">
-              <p class="text-sm font-semibold text-primary">Объект: Завод «Технопром»</p>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Казань, 2021</p>
-              <dl class="mt-4 space-y-2 text-sm">
-                <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Организация пожарной сигнализации.</dd></div>
-                <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Адресная система ОПС.</dd></div>
-                <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Соответствие нормам пожарной безопасности.</dd></div>
-              </dl>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: Завод «Технопром»</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Казань, 2021</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Организация пожарной сигнализации.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Адресная система ОПС.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Соответствие нормам пожарной безопасности.</dd></div>
+                </dl>
+              </div>
             </div>
           </article>
 
           <!-- 4 -->
           <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5 relative">
-              <img class="js-img absolute inset-0 h-full w-full object-cover"
-                   data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI0z6cJtOfhlZM8i8KIZEAv-GFx480nzUp_8FgRciAsgjCavlkJUzesRRYjkl15f8E2n7TB3rDx2YmDkV1E73ddUc_og6STNamE9CffQvHRfte5e_ddQ3WnКcFaOm6tZUav9n5ZYqLWJDbodЗbsw0TBgH21PhMuOMQ7ml8PmKpD_JZTt8K74IL2dT_KbU_u-__jE9MB6rAV7TPfSghJDArR149YfAgAiQAHaj81X47jQy9EwayWw78qpeb-AHzu6hJn9gUHJF8hOaW"
-                   alt="ТРЦ «Сибирь» — интегрированная система безопасности"/>
-              <div class="js-fallback hidden ph absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5a2 2 0 0 0-2-2H5C3.9 3 3 3.9 3 5v14l4-4h12l2 2z"/></svg>
-              </div>
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI0z6cJtOfhlZM8i8KIZEAv-GFx480nzUp_8FgRciAsgjCavlkJUzesRRYjkl15f8E2n7TB3rDx2YmDkV1E73ddUc_og6STNamE9CffQvHRfte5e_ddQ3WnKcFaOm6tZUav9n5ZYqLWJDbodZbsw0TBgH21PhMuOMQ7ml8PmKpD_JZTt8K74IL2dT_KbU_u-__jE9MB6rAV7TPfSghJDArR149YfAgAiQAHaj81X47jQy9EwayWw78qpeb-AHzu6hJn9gUHJF8hOaW" alt="ТРЦ «Сибирь» — интегрированная система безопасности"/>
             </div>
-            <div class="p-6">
-              <p class="text-sm font-semibold text-primary">Объект: ТРЦ «Сибирь»</p>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Новосибирск, 2020</p>
-              <dl class="mt-4 space-y-2 text-sm">
-                <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Комплексная система безопасности.</dd></div>
-                <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Интеграция видеонаблюдения, СКУД и ОПС.</dd></div>
-                <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Централизованный мониторинг и управление.</dd></div>
-              </dl>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: ТРЦ «Сибирь»</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Новосибирск, 2020</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Комплексная система безопасности.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Интеграция видеонаблюдения, СКУД и ОПС.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Централизованный мониторинг и управление.</dd></div>
+                </dl>
+              </div>
             </div>
           </article>
 
-          <!-- 5 — УРФУ (без картинки: плейсхолдер академической шапочки) -->
+          <!-- 5 -->
           <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5 relative">
-              <!-- data-src оставлен пустым умышленно -->
-              <img class="js-img absolute inset-0 h-full w-full object-cover" data-src=""
-                   alt="Университет УрФУ — контроль доступа"/>
-              <div class="js-fallback ph absolute inset-0">
-                <!-- академическая шапочка -->
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 3L1 9l11 6 9-4.909V17h2V9L12 3zm0 13L5 12.545V16L12 19l7-3v-3.455L12 16z"/>
-                </svg>
-              </div>
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuxz1TCdTJEQWimfLlH4ri235U1ioVZeJv7PuVHAUMp39CNYBF5WIQ7K4AoRWJV-ZZWXvX1KU-jA5Q7CQgahM9Vn7jDw6xWnwnDt7c63rQlDltclQ8-W7MshFugr19р64J6icFfHRZyoTXIbwuJ6MRk6MZF8hN_s4iQaLuAt2xSY2QClrjbaxaqLeuP4XOv5ZI-DoqhDf_hGkwb7O9CxfOWNvn9I8BHQPvR_9wsnh6AL73Cdf7LryoLual7ZSVekMM-HOAjzAtep0e" alt="Университет УрФУ — контроль доступа"/>
             </div>
-            <div class="p-6">
-              <p class="text-sm font-semibold text-primary">Объект: Университет УрФУ</p>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Екатеринбург, 2019</p>
-              <dl class="mt-4 space-y-2 text-sm">
-                <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Обеспечение безопасности корпусов.</dd></div>
-                <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Контроль доступа в учебные аудитории.</dd></div>
-                <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Безопасная среда для студентов.</dd></div>
-              </dl>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: Университет УрФУ</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Екатеринбург, 2019</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Обеспечение безопасности корпусов.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Контроль доступа в учебные аудитории.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Безопасная среда для студентов.</dd></div>
+                </dl>
+              </div>
             </div>
           </article>
 
           <!-- 6 -->
           <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5 relative">
-              <img class="js-img absolute inset-0 h-full w-full object-cover"
-                   data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWjsuplQ3yKynIxMbtNBoRIFZc2sNgejEfFXvTELeiEMELPEWkRsBCpx0Jb0p246z5yzQo1ifQJgq4d9V5l4DEsRfxAypokBLVRbQnuWssROzn6q5mJ7IgEu32QXe7llVwXPtY7eTpsMwbw0JxsjY5kncbzKnED7rIF3zHdJ-vQxC9itrUO9-tiyo3PdkyoGUvcRwkbyxK92fghG63VwPJA2tCCkwNKWнqCHK_sMP6pAb1vINQZOVRwzsMNgZ8-3g8ICq658uf7Ics"
-                   alt="Областная больница — биометрический доступ"/>
-              <div class="js-fallback hidden ph absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5a2 2 0 0 0-2-2H5C3.9 3 3 3.9 3 5v14l4-4h12l2 2z"/></svg>
-              </div>
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWjsuplQ3yKynIxMbtNBoRIFZc2sNgejEfFXvTELeiEMELPEWkRsBCpx0Jb0p246z5yzQo1ifQJgq4d9V5l4DEsRfxAypokBLVRbQnuWssROzn6q5mJ7IgEu32QXe7llVwXPtY7eTpsMwbw0JxsjY5kncbzKnED7rIF3zHdJ-vQxC9itrUO9-tiyo3PdkyoGUvcRwkbyxK92fghG63VwPJA2tCCkwNKWnqCHK_sMP6pAb1vINQZOVRwzsMNgZ8-3g8ICq658uf7Ics" alt="Областная больница — биометрический доступ"/>
             </div>
-            <div class="p-6">
-              <p class="text-sm font-semibold text-primary">Объект: Областная больница</p>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Нижний Новгород, 2018</p>
-              <dl class="mt-4 space-y-2 text-sm">
-                <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Контроль доступа в служебные помещения.</dd></div>
-                <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Биометрические считыватели.</dd></div>
-                <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Защита материальных ценностей.</dd></div>
-              </dl>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: Областная больница</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Нижний Новгород, 2018</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Контроль доступа в служебные помещения.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Биометрические считыватели.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Защита материальных ценностей.</dd></div>
+                </dl>
+              </div>
             </div>
           </article>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (единый) -->
     <footer class="border-t border-border-light dark:border-border-dark bg-background-light/60 dark:bg-background-dark/60">
       <div class="max-w-[1200px] mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -251,7 +226,7 @@
             <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="about.html">О нас</a>
             <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="services.html">Услуги</a>
             <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="projects.html">Проекты</a>
-            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="certifications.html">Сертификаты</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
             <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html">Контакты</a>
           </nav>
           <p class="text-sm text-subtle-light dark:text-subtle-dark md:order-1">© 2025 Инжиниринг систем безопасности. Все права защищены.</p>
@@ -264,26 +239,12 @@
   </div>
 
   <script>
-    // Мобильное меню
+    // Мобильное меню (единое для сайта)
     const menuBtn = document.getElementById('menuBtn');
     const mobileNav = document.getElementById('mobileNav');
     if (menuBtn && mobileNav) {
       menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
     }
-
-    // Безопасная подстановка изображений с фолбэком
-    document.querySelectorAll('.js-img').forEach(img => {
-      const url = img.getAttribute('data-src');
-      const fb = img.parentElement.querySelector('.js-fallback');
-      if (!url) { // нет картинки — показываем плейсхолдер
-        if (fb) fb.classList.remove('hidden');
-        return;
-      }
-      const probe = new Image();
-      probe.onload = () => { img.src = url; if (fb) fb.classList.add('hidden'); };
-      probe.onerror = () => { if (fb) fb.classList.remove('hidden'); };
-      probe.src = url;
-    });
   </script>
 </body>
 </html>
