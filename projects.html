@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Проекты — Инжиниринг систем безопасности</title>
-  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script>
     tailwind.config = {
@@ -26,29 +29,23 @@
             "border-dark": "#374151"
           },
           fontFamily: { display: ["Inter", "sans-serif"] },
-          borderRadius: {
-            DEFAULT: "0.5rem",
-            lg: "0.75rem",
-            xl: "1rem",
-            full: "9999px"
-          }
+          borderRadius: { DEFAULT: "0.5rem", lg: "0.75rem", xl: "1rem", full: "9999px" }
         }
       }
     }
   </script>
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-  </style>
+  <style>body{font-family:'Inter',sans-serif}</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
-  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-    <!-- Header (shared) -->
-    <header class="sticky top-0 z-50 border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-      <div class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
+  <div class="min-h-screen flex flex-col">
+
+    <!-- Header (единый) -->
+    <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10 border-b border-border-light dark:border-border-dark">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
           <a href="index.html" class="flex items-center gap-3">
-            <span class="size-6 text-primary inline-flex">
-              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6">
+            <span class="inline-flex text-primary">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 1.5L2 7.5V16.5L12 22.5L22 16.5V7.5L12 1.5ZM4 8.6L12 13.2L20 8.6L12 4L4 8.6ZM12 14.8L4 10.2V15.4L12 20.1V14.8ZM14 20.1L20 15.4V10.2L12 14.8L14 20.1Z"></path>
               </svg>
             </span>
@@ -59,14 +56,14 @@
           <nav class="hidden md:flex items-center gap-6">
             <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">О нас</a>
             <a class="text-sm font-medium hover:text-primary transition-colors" href="services.html">Услуги</a>
-            <a class="text-sm font-medium hover:text-primary transition-colors" href="projects.html">Проекты</a>
+            <a class="text-sm font-bold text-primary" href="projects.html">Проекты</a>
             <a class="text-sm font-medium hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
             <a class="text-sm font-medium hover:text-primary transition-colors" href="contacts.html">Контакты</a>
           </nav>
 
-          <div class="hidden md:flex items-center gap-3">
-            <a href="contacts.html#contact-form" class="rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-colors">
-              Заказать коммерческое предложение
+          <div class="hidden md:flex items-center">
+            <a href="contacts.html#contact-form" class="bg-primary text-white font-bold py-2 px-4 rounded-lg text-sm hover:bg-primary/90 transition-colors">
+              Запросить КП
             </a>
           </div>
 
@@ -82,10 +79,10 @@
 
       <!-- Mobile nav -->
       <nav id="mobileNav" class="md:hidden hidden border-t border-border-light dark:border-border-dark">
-        <div class="mx-auto max-w-[1200px] px-4 py-3 flex flex-col gap-2">
+        <div class="max-w-[1200px] mx-auto px-4 py-3 flex flex-col gap-2">
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="about.html">О нас</a>
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="services.html">Услуги</a>
-          <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="projects.html">Проекты</a>
+          <a class="py-2 text-sm font-bold text-primary" href="projects.html">Проекты</a>
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
           <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="contacts.html">Контакты</a>
           <a class="py-2 text-sm font-bold text-white bg-primary rounded-lg text-center hover:bg-primary/90 transition-colors" href="contacts.html#contact-form">Запросить КП</a>
@@ -93,198 +90,160 @@
       </nav>
     </header>
 
+    <!-- Main -->
     <main class="flex-grow">
-      <!-- Title / Hero -->
-      <section class="relative">
-        <div class="absolute inset-0 bg-cover bg-center" style='background-image: linear-gradient(135deg, rgba(13,57,89,0.75), rgba(13,57,89,0.35)), url("https://lh3.googleusercontent.com/aida-public/AB6AXu_projects_hero");'></div>
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="relative mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 py-20 text-white">
-          <h1 class="text-4xl sm:text-5xl font-black leading-tight tracking-tight">Проекты</h1>
-          <p class="mt-3 max-w-3xl text-white/90">Подборка реализованных объектов: офисные центры, жилые комплексы и промышленные площадки.</p>
-        </div>
-      </section>
+      <section class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <h1 class="text-4xl font-extrabold">Наши проекты</h1>
 
-      <!-- Filters (static, non-JS) -->
-      <section class="py-8 px-4 sm:px-6 lg:px-8 border-b border-border-light dark:border-border-dark bg-white/60 dark:bg-white/5">
-        <div class="mx-auto max-w-[1200px] flex flex-wrap items-center gap-3">
-          <a href="#office" class="px-4 h-10 inline-flex items-center rounded-full border border-border-light dark:border-border-dark text-sm font-medium hover:bg-background-light/70 dark:hover:bg-background-dark/70">Офисы</a>
-          <a href="#residential" class="px-4 h-10 inline-flex items-center rounded-full border border-border-light dark:border-border-dark text-sm font-medium hover:bg-background-light/70 dark:hover:bg-background-dark/70">Жилые</a>
-          <a href="#industrial" class="px-4 h-10 inline-flex items-center rounded-full border border-border-light dark:border-border-dark text-sm font-medium hover:bg-background-light/70 dark:hover:bg-background-dark/70">Промышленные</a>
-          <a href="#integrations" class="px-4 h-10 inline-flex items-center rounded-full border border-border-light dark:border-border-dark text-sm font-medium hover:bg-background-light/70 dark:hover:bg-background-dark/70">Интеграции</a>
-        </div>
-      </section>
-
-      <!-- Projects Grid -->
-      <section class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-[1200px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          <!-- Card -->
-          <article id="office" class="group overflow-hidden rounded-lg border border-border-light dark:border-border-dark">
-            <div class="w-full h-56 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuProj_office01");'></div>
-            <div class="p-6 bg-background-light dark:bg-background-dark">
-              <h2 class="text-lg font-bold">Офисный центр «Север»</h2>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">CCTV, СКУД, ОПС, оповещение. Единый пульт управления и отчётность.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">CCTV</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">СКУД</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">ОПС</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="group overflow-hidden rounded-lg border border-border-light dark:border-border-dark">
-            <div class="w-full h-56 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuProj_industrial01");'></div>
-            <div class="p-6 bg-background-light dark:bg-background-dark">
-              <h2 class="text-lg font-bold">Промышленный объект «Технопарк»</h2>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Периметр, видеонаблюдение, интеграция с системой контроля доступа.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">Периметр</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">CCTV</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">Интеграция</span>
-              </div>
-            </div>
-          </article>
-
-          <article id="residential" class="group overflow-hidden rounded-lg border border-border-light dark:border-border-dark">
-            <div class="w-full h-56 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuProj_residential01");'></div>
-            <div class="p-6 bg-background-light dark:bg-background-dark">
-              <h2 class="text-lg font-bold">ЖК «Панорама»</h2>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">СКУД подъездов, видеодомофония, видеонаблюдение дворовых территорий.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">СКУД</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">Домофония</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">CCTV</span>
-              </div>
-            </div>
-          </article>
-
-          <article id="integrations" class="group overflow-hidden rounded-lg border border-border-light dark:border-border-dark">
-            <div class="w-full h-56 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuProj_integration01");'></div>
-            <div class="p-6 bg-background-light dark:bg-background-dark">
-              <h2 class="text-lg font-bold">Единый ситуационный центр</h2>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Интеграция CCTV/СКУД/ОПС, сценарии реагирования, журналы событий.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">Интеграция</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">Сценарии</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">Отчётность</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="group overflow-hidden rounded-lg border border-border-light dark:border-border-dark">
-            <div class="w-full h-56 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuProj_office02");'></div>
-            <div class="p-6 bg-background-light dark:bg-background-dark">
-              <h2 class="text-lg font-bold">Бизнес-центр «Риверсайд»</h2>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Пусконаладка CCTV, настройка аналитики, SLA-обслуживание.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">CCTV</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">SLA</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="group overflow-hidden rounded-lg border border-border-light dark:border-border-dark">
-            <div class="w-full h-56 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuProj_residential02");'></div>
-            <div class="p-6 bg-background-light dark:bg-background-dark">
-              <h2 class="text-lg font-bold">Коттеджный посёлок</h2>
-              <p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">Видеонаблюдение периметра, пропускной режим, удалённый мониторинг.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">Периметр</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">СКУД</span>
-                <span class="text-xs px-2 py-1 rounded-full border border-border-light dark:border-border-dark">Мониторинг</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Case Studies (detailed) -->
-      <section class="bg-primary/5 dark:bg-primary/10 py-16 px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-[1200px]">
-          <h2 class="text-3xl font-bold tracking-tight text-center">Кейсы</h2>
-          <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Case 1 -->
-            <article class="rounded-xl border border-border-light dark:border-border-dark overflow-hidden">
-              <div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXu_case_office");'></div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold">Офисный центр: «умное» видеонаблюдение</h3>
-                <ul class="mt-3 text-sm text-subtle-light dark:text-subtle-dark space-y-2 list-disc pl-5">
-                  <li>Аналитика движения и распознавание событий</li>
-                  <li>Архив с резервированием и быстрым поиском</li>
-                  <li>Интеграция с СКУД и сценариями оповещения</li>
-                </ul>
-                <div class="mt-6 flex flex-wrap gap-3">
-                  <a href="services.html#subsystems" class="inline-flex items-center rounded-lg h-10 px-4 border border-border-light dark:border-border-dark text-sm font-bold hover:bg-background-light/70 dark:hover:bg-background-dark/70">Подсистемы</a>
-                  <a href="contacts.html#contact-form" class="inline-flex items-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90">Запросить КП</a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Case 2 -->
-            <article class="rounded-xl border border-border-light dark:border-border-dark overflow-hidden">
-              <div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXu_case_industrial");'></div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold">Промышленный объект: защита периметра</h3>
-                <ul class="mt-3 text-sm text-subtle-light dark:text-subtle-dark space-y-2 list-disc pl-5">
-                  <li>Многорубежное обнаружение нарушений</li>
-                  <li>Связка с PTZ-камерами и тревожными пресетами</li>
-                  <li>Сценарии реакции и журнал инцидентов</li>
-                </ul>
-                <div class="mt-6 flex flex-wrap gap-3">
-                  <a href="services.html#list" class="inline-flex items-center rounded-lg h-10 px-4 border border-border-light dark:border-border-dark text-sm font-bold hover:bg-background-light/70 dark:hover:bg-background-dark/70">Все услуги</a>
-                  <a href="contacts.html#contact-form" class="inline-flex items-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90">Обсудить проект</a>
-                </div>
-              </div>
-            </article>
+          <!-- Псевдо-фильтры (без JS; можно прикрутить позже) -->
+          <div class="flex flex-wrap gap-2">
+            <span class="rounded-full bg-primary px-4 py-2 text-sm font-medium text-white">Все</span>
+            <span class="rounded-full border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-2 text-sm font-medium text-subtle-light dark:text-subtle-dark">Видео-наблюдение</span>
+            <span class="rounded-full border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-2 text-sm font-medium text-subtle-light dark:text-subtle-dark">СКУД</span>
+            <span class="rounded-full border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-2 text-sm font-medium text-subtle-light dark:text-subtle-dark">ОПС</span>
           </div>
         </div>
-      </section>
 
-      <!-- CTA -->
-      <section class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-[1200px] rounded-xl border border-border-light dark:border-border-dark p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <h3 class="text-2xl font-bold">Хотите похожий проект?</h3>
-            <p class="mt-1 text-subtle-light dark:text-subtle-dark">Подберём решения под ваш объект и бюджет. Сроки и смета — до подписания договора.</p>
-          </div>
-          <a href="contacts.html#contact-form" class="inline-flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:bg-primary/90 transition-colors">Запросить КП</a>
+        <!-- Cards -->
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- 1 -->
+          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2I5IuIx1fg-rfPLk2zMSyuDohI_ZcxTrEe4lXTX2aI814qk4L1z3gxsb_S2THC48vnIkxdY-pu6CLEINH_fMYIcv4KpoStRwUmo4J8Myp_1vL3VMI0qYdCly7M9kSBUpVagJ9Jd9vFQonvZIJBhQt8JJIumy6qWG-fMYBS2_dxm_oZhm9Sccvl3Up3uOEIT0stumoT25EtmWBBjwhefxxnL2xP3mgL9dZ5zk3cYWCg0TBMkJBtwTkfHDf160Fi9d3lMdhkQxzo3lF" alt="Бизнес-центр «Аврора» — видеонаблюдение"/>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: Бизнес-центр «Аврора»</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Москва, 2023</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Модернизация системы видеонаблюдения.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Установка IP-камер высокого разрешения.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Повышение уровня безопасности на 90%.</dd></div>
+                </dl>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO5KffYorhfmkoQJpRqqFV8ivbCcXBWv_2McUpElvIvDG5nkeLkLv4afwxcE7jG1G6VSawkOL6-6ynkxkceLqZnZyrwca30-hRdzfmzJJKyTuQ-mJ1rhZN2cmsauqzOpArmB2Ri0jQvYObRI_ezufQf86JVeaf_kM7suXaWgP_agSRbc-8qDFQPLbn-L8XBfWrU4kpfg_EYMFN-zZQTBf3K8nlD-VoMxJCynFnopNIM-Xo94JvlwdR7jPvfAq5ZX2Dp3Pfe_o3ACkf" alt="ЖК «Невский Бриз» — интеграция СКУД и домофонии"/>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: ЖК «Невский Бриз»</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Санкт-Петербург, 2022</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Интеграция СКУД и домофонии.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">IP-домофония с контролем доступа.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Единая система управления доступом.</dd></div>
+                </dl>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Z_6Y62CsxFCku9J3aCj6B3f3hHXr8yQJLj_dOJxncqx_hjpvARXmLcSuUsfuRy3ykLPYlmCCsqfw4knWYx0STp7Y4qT5zWAGLLEhtDRvZHCfMnfRYneduMlpjcZ11KBG6ZL_khzAm501OeZzyGUKH40td2zxCKT-ssXCIMLAB3E4FsgvBE8jDJP5ImNMwradnFxiKfzizwdWHmRCIvDBwoDVuHbSfT4YA-djEFShFzRM_hHwNHeOG02-jNKyuXGiGHZZYMYV9lm0" alt="Завод «Технопром» — организация ОПС"/>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: Завод «Технопром»</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Казань, 2021</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Организация пожарной сигнализации.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Адресная система ОПС.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Соответствие нормам пожарной безопасности.</dd></div>
+                </dl>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI0z6cJtOfhlZM8i8KIZEAv-GFx480nzUp_8FgRciAsgjCavlkJUzesRRYjkl15f8E2n7TB3rDx2YmDkV1E73ddUc_og6STNamE9CffQvHRfte5e_ddQ3WnKcFaOm6tZUav9n5ZYqLWJDbodZbsw0TBgH21PhMuOMQ7ml8PmKpD_JZTt8K74IL2dT_KbU_u-__jE9MB6rAV7TPfSghJDArR149YfAgAiQAHaj81X47jQy9EwayWw78qpeb-AHzu6hJn9gUHJF8hOaW" alt="ТРЦ «Сибирь» — интегрированная система безопасности"/>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: ТРЦ «Сибирь»</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Новосибирск, 2020</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Комплексная система безопасности.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Интеграция видеонаблюдения, СКУД и ОПС.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Централизованный мониторинг и управление.</dd></div>
+                </dl>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuxz1TCdTJEQWimfLlH4ri235U1ioVZeJv7PuVHAUMp39CNYBF5WIQ7K4AoRWJV-ZZWXvX1KU-jA5Q7CQgahM9Vn7jDw6xWnwnDt7c63rQlDltclQ8-W7MshFugr19р64J6icFfHRZyoTXIbwuJ6MRk6MZF8hN_s4iQaLuAt2xSY2QClrjbaxaqLeuP4XOv5ZI-DoqhDf_hGkwb7O9CxfOWNvn9I8BHQPvR_9wsnh6AL73Cdf7LryoLual7ZSVekMM-HOAjzAtep0e" alt="Университет УрФУ — контроль доступа"/>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: Университет УрФУ</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Екатеринбург, 2019</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Обеспечение безопасности корпусов.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Контроль доступа в учебные аудитории.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Безопасная среда для студентов.</dd></div>
+                </dl>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWjsuplQ3yKynIxMbtNBoRIFZc2sNgejEfFXvTELeiEMELPEWkRsBCpx0Jb0p246z5yzQo1ifQJgq4d9V5l4DEsRfxAypokBLVRbQnuWssROzn6q5mJ7IgEu32QXe7llVwXPtY7eTpsMwbw0JxsjY5kncbzKnED7rIF3zHdJ-vQxC9itrUO9-tiyo3PdkyoGUvcRwkbyxK92fghG63VwPJA2tCCkwNKWnqCHK_sMP6pAb1vINQZOVRwzsMNgZ8-3g8ICq658uf7Ics" alt="Областная больница — биометрический доступ"/>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: Областная больница</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Нижний Новгород, 2018</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Контроль доступа в служебные помещения.</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Биометрические считыватели.</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Защита материальных ценностей.</dd></div>
+                </dl>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
     </main>
 
-    <!-- Footer (shared) -->
-    <footer class="border-t border-border-light dark:border-border-dark py-10 px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-[1200px] flex flex-col md:flex-row items-center justify-between gap-6">
-        <a href="index.html" class="flex items-center gap-3">
-          <span class="size-6 text-primary inline-flex">
-            <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6">
-              <path d="M12 1.5L2 7.5V16.5L12 22.5L22 16.5V7.5L12 1.5ZM4 8.6L12 13.2L20 8.6L12 4L4 8.6ZM12 14.8L4 10.2V15.4L12 20.1V14.8ZM14 20.1L20 15.4V10.2L12 14.8L14 20.1Z"></path>
-            </svg>
-          </span>
-          <span class="text-lg font-bold">Инжиниринг систем безопасности</span>
-        </a>
-        <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="about.html">О нас</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="services.html">Услуги</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="projects.html">Проекты</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html">Контакты</a>
-        </nav>
-        <p class="text-sm text-subtle-light dark:text-subtle-dark text-center md:text-right">© 2025 Инжиниринг систем безопасности. Все права защищены.</p>
-      </div>
-      <div class="mx-auto max-w-[1200px] mt-6 text-center text-xs text-subtle-light dark:text-subtle-dark">
-        <p>УНП 123456789. г. Минск, ул. Примерная, 1, офис 101.</p>
+    <!-- Footer (единый) -->
+    <footer class="border-t border-border-light dark:border-border-dark bg-background-light/60 dark:bg-background-dark/60">
+      <div class="max-w-[1200px] mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 md:order-2">
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="about.html">О нас</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="services.html">Услуги</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="projects.html">Проекты</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html">Контакты</a>
+          </nav>
+          <p class="text-sm text-subtle-light dark:text-subtle-dark md:order-1">© 2025 Инжиниринг систем безопасности. Все права защищены.</p>
+        </div>
+        <div class="mt-6 text-center text-xs text-subtle-light dark:text-subtle-dark">
+          <p>УНП 123456789. г. Минск, ул. Примерная, 1, офис 101.</p>
+        </div>
       </div>
     </footer>
   </div>
 
   <script>
-    // Simple mobile menu toggle (no dependencies)
+    // Мобильное меню (единое для сайта)
     const menuBtn = document.getElementById('menuBtn');
     const mobileNav = document.getElementById('mobileNav');
     if (menuBtn && mobileNav) {
-      menuBtn.addEventListener('click', () => {
-        mobileNav.classList.toggle('hidden');
-      });
+      menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
     }
   </script>
 </body>
