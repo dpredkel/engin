@@ -34,7 +34,20 @@
       }
     }
   </script>
-  <style>body{font-family:'Inter',sans-serif}</style>
+  <style>
+    body{font-family:'Inter',sans-serif}
+    /* небольшая косметика для фолбэка */
+    .bg-fallback::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(135deg, rgba(13,57,89,.60), rgba(13,57,89,.30));
+    }
+    .bg-fallback > svg{
+      position:absolute; inset:0; margin:auto;
+      width:48px; height:48px; color:rgba(255,255,255,.9);
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+    }
+  </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
   <div class="min-h-screen flex flex-col">
@@ -96,9 +109,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           <!-- 1 -->
           <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
-            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOa1DI9NL-zNZ7t9xrQgXYgBarw3o2S0o_gKJD_kV4pnEsFEesOC9O9meH5JhS9yIZOM_3QI2DR4WAKEPAOBhWK9f_QSToUaVWgHnMo-RO4Bj1TujOO8r7vS20MnhPPLH0mu6DSAh7hsdDyJyTHNAqUjAAw0IpEMqCkfCM7yF_QIZP68Yh1lJnYyBWG_T_0byXgfzrhqMFesJS8-ZBwMhaLLg-6hidJTQENibJH1mcFCuyvnzpwcseaz9kM08dUagJQzZrgOXoRffU");'>
-              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
-            </div>
+            <div class="relative h-48 bg-cover bg-center js-bg" data-bg="https://lh3.googleusercontent.com/aida-public/AB6AXuAOa1DI9NL-zNZ7t9xrQgXYgBarw3o2S0o_gKJD_kV4pnEsFEesOC9O9meH5JhS9yIZOM_3QI2DR4WAKEPAOBhWK9f_QSToUaVWgHnMo-RO4Bj1TujOO8r7vS20MnhPPLH0mu6DSAh7hsdDyJyTHNAqUjAAw0IpEMqCkfCM7yF_QIZP68Yh1lJnYyBWG_T_0byXgfzrhqMFesJS8-ZBwMhaLLg-6hidJTQENibJH1mcFCuyvnzpwcseaz9kM08dUagJQzZrgOXoRffU"></div>
             <div class="p-6 flex-grow flex flex-col">
               <h3 class="text-lg font-bold mb-2">Проектирование систем пожарной безопасности</h3>
               <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Комплексное проектирование систем пожарной безопасности для зданий и сооружений.</p>
@@ -108,9 +119,7 @@
 
           <!-- 2 -->
           <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
-            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuAt4zt69pqKkuC-LcZdA3T36-ElXuaFI1O-SFr0DbAjLq8q499MB1JvLSsGyKvsUjwdP9YRRkdm2MMXj0PF08RinE4lcbaTLU31n884UOfu_lqAgZD5MV3uY8FTwZCT46f7u-MjJk_ZPIJTmj-ORRvlYjHFDP0v9CNRdj2RhUrG883oyH8HY1oUCQLjNLuAkrmqO98dY9P9abOp4aOOMUJktgU9PlSwcO9o3iupHQh2y9Bg_4mW2tquNu3BRmxw3Zv1cbbWOBauyz98");'>
-              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
-            </div>
+            <div class="relative h-48 bg-cover bg-center js-bg" data-bg="https://lh3.googleusercontent.com/aida-public/AB6AXuAt4zt69pqKkuC-LcZdA3T36-ElXuaFI1O-SFr0DbAjLq8q499MB1JvLSsGyKvsUjwdP9YRRkdm2MMXj0PF08RinE4lcbaTLU31n884UOfu_lqAgZD5MV3uY8FTwZCT46f7u-MjJk_ZPIJTmj-ORRvlYjHFDP0v9CNRdj2RhUrG883oyH8HY1oUCQLjNLuAkrmqO98dY9P9abOp4aOOMUJktgU9PlSwcO9o3iupHQh2y9Bg_4mW2tquNu3BRmxw3Zv1cbbWOBauyz98"></div>
             <div class="p-6 flex-grow flex flex-col">
               <h3 class="text-lg font-bold mb-2">Проектирование охранной сигнализации</h3>
               <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование систем охранной сигнализации для защиты от несанкционированного доступа.</p>
@@ -120,9 +129,7 @@
 
           <!-- 3 -->
           <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
-            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIG_KLrGdZuGI1M83GRuUv1Oe_sxRjYUmVr6PpFWFviR1c6mNCQk4l8oLo4R9pGO_jC99xDVSkEofrmeZR__quKt2ZQDCz9RSJt_8Vjh-CNOyszbHnr_Y-J523KKlHspMXYdNWATmjhqu4datAbSPGt7EfmdyJejnUzIoCaV75Svo5wcRWh-gLW-IiELbr1feHA6NjgnmDKBNtiJQ74BLxSCTj8gi9u0NbRTbeO-WLVYHkJepvvcOHtwIiYzfaKQsQHahmoAANHdxr");'>
-              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
-            </div>
+            <div class="relative h-48 bg-cover bg-center js-bg" data-bg="https://lh3.googleusercontent.com/aida-public/AB6AXuDIG_KLrGdZuGI1M83GRuUv1Oe_sxRjYUmVr6PpFWFviR1c6mNCQk4l8oLo4R9pGO_jC99xDVSkEofrmeZR__quKt2ZQDCz9RSJt_8Vjh-CNOyszbHnr_Y-J523KKlHspMXYdNWATmjhqu4datAbSPGt7EfmdyJejnUzIoCaV75Svo5wcRWh-gLW-IiELbr1feHA6NjgnmDKBNtiJQ74BLxSCTj8gi9u0NbRTbeO-WLVYHkJepvvcOHtwIiYzfaKQsQHahmoAANHdxr"></div>
             <div class="p-6 flex-grow flex flex-col">
               <h3 class="text-lg font-bold mb-2">Проектирование систем контроля доступа</h3>
               <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование СКУД для управления и мониторинга точек входа.</p>
@@ -132,9 +139,7 @@
 
           <!-- 4 -->
           <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
-            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-3C4ZRT4IaGC2Ghuj3cFcUaFiNpUVpUZJN7JPt8gMMIvNkKF1b4lIEZyRkMFElKcla1G1PDeTH164TQ959I4IIgtBHO0ggH73yuuJ2re7rPl2PVd7OEaWVHgPH0QdQHbzjqUgOkP87aKd-kESMi99qMjhiQwdGmuh5t7B_zTOWH9Gc5jSIjsd6zVZInY8Ae_EVwJhqZfFRtne2888ZZ1qQBdJr5VQh4-5casQaIAzxNOtxHhMWEeDjrUyJZMd92OQopjs4i30mhAD");'>
-              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
-            </div>
+            <div class="relative h-48 bg-cover bg-center js-bg" data-bg="https://lh3.googleusercontent.com/aida-public/AB6AXuD-3C4ZRT4IaGC2Ghuj3cFcUaFiNpUVpUZJN7JPt8gMMIvNkKF1b4lIEZyRkMFElKcla1G1PDeTH164TQ959I4IIgtBHO0ggH73yuuJ2re7rPl2PVd7OEaWVHgPH0QdQHbzjqUgOkP87aKd-kESMi99qMjhiQwdGmuh5t7B_zTOWH9Gc5jSIjsd6zVZInY8Ae_EVwJhqZfFRtne2888ZZ1qQBdJr5VQh4-5casQaIAzxNOtxHhMWEeDjrUyJZMd92OQopjs4i30mhAD"></div>
             <div class="p-6 flex-grow flex flex-col">
               <h3 class="text-lg font-bold mb-2">Проектирование систем видеонаблюдения</h3>
               <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование систем видеонаблюдения для мониторинга и записи.</p>
@@ -142,11 +147,9 @@
             </div>
           </article>
 
-          <!-- 5 -->
+          <!-- 5 — интегрированные системы -->
           <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
-            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJVd-fgx3iA7rJNQxkAPEgEbJZtJP2uybTPBe3WxTsjXGuva99XD30lv-Y7KEZ8Qbglgx8twyANcGftXRq17MP591NuDD5WNoxotrYObT6F8Tdc1VB8WU9W8CbaeHjNqgzPi2Kvf6DGdKSFei8-ZbdVnj4Q175EcЗ4p67I7Bh0zo02ILhX4Wzp3idWsONHPwkN_sW6HwVwqn7zipMBfKIScAT8y1SInn9LmFuGwMYuDk9-qXsggiSam1YtsSeeeFZYVvYC1_R0jUlg");'>
-              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
-            </div>
+            <div class="relative h-48 bg-cover bg-center js-bg" data-bg="https://lh3.googleusercontent.com/aida-public/AB6AXuBJVd-fgx3iA7rJNQxkAPEgEbJZtJP2uybTPBe3WxTsjXGuva99XD30lv-Y7KEZ8Qbglgx8twyANcGftXRq17MP591NuDD5WNoxotrYObT6F8Tdc1VB8WU9W8CbaeHjNqgzPi2Kvf6DGdKSFei8-ZbdVnj4Q175EcZ4p67I7Bh0zo02ILhX4Wzp3idWsONHPwkN_sW6HwVwqn7zipMBfKIScAT8y1SInn9LmFuGwMYuDk9-qXsggiSam1YtsSeeeFZYVvYC1_R0jUlg"></div>
             <div class="p-6 flex-grow flex flex-col">
               <h3 class="text-lg font-bold mb-2">Проектирование интегрированных систем</h3>
               <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование интегрированных систем безопасности, объединяющих различные подсистемы.</p>
@@ -156,9 +159,7 @@
 
           <!-- 6 -->
           <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
-            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9PKNbFZ8CgltP5fqqb8fdh0caKXwzMt4lv-CQ3aYw93v-9ttzQ8Mj52wq-p5PG2dFIMz2oQB51W_CrX6xNWlgReigQHa-5lUxY55UwWdi_QUyX5girB8FURgCDl-ewzI697Rsetc1WY_0hnxAYYPmuRjntXRngdCciXjwaoGG26bk2cGYJ-vj9iC60Hs93qGXZ77WMwgzZh5KF3MRha861L5NoHMLpNEThc9ia9939BOz7z8-2wfvZvi_2DfYnZoFpg7b9q33X6Rn");'>
-              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
-            </div>
+            <div class="relative h-48 bg-cover bg-center js-bg" data-bg="https://lh3.googleusercontent.com/aida-public/AB6AXuB9PKNbFZ8CgltP5fqqb8fdh0caKXwzMt4lv-CQ3aYw93v-9ttzQ8Mj52wq-p5PG2dFIMz2oQB51W_CrX6xNWlgReigQHa-5lUxY55UwWdi_QUyX5girB8FURgCDl-ewzI697Rsetc1WY_0hnxAYYPmuRjntXRngdCciXjwaoGG26bk2cGYJ-vj9iC60Hs93qGXZ77WMwgzZh5KF3MRha861L5NoHMLpNEThc9ia9939BOz7z8-2wfvZvi_2DfYnZoFpg7b9q33X6Rn"></div>
             <div class="p-6 flex-grow flex flex-col">
               <h3 class="text-lg font-bold mb-2">Проектирование охраны периметра</h3>
               <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование систем охраны периметра для защиты внешних границ объекта.</p>
@@ -166,11 +167,9 @@
             </div>
           </article>
 
-          <!-- 7 -->
+          <!-- 7 — пожаротушение -->
           <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
-            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuCr1lW9Z4QjPe-ziFmsзG3xNzJk85jsi6Jj4qBvhWnru3_t_jyIqNOuOPeKz3K9SXqtWH-8mJTIchQwkZZKM6jasl3ClfmBkBRcOG8uLiX5daWXtp7rF8hsF1kRt4a1BjAfQwa9pHIxKN_xPr3Z6yrv7aP55aHGqpMylkzFIxi9kI232oaLgZTdJEWDSQjMbCZ6O_x0ck2sq8UzjjqCI7JlXAKW-r_0fh4Zz1SwRK54H0PgvFeZInVrLHtnmxgmvSHV23y-xTb1fzfJ");'>
-              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
-            </div>
+            <div class="relative h-48 bg-cover bg-center js-bg" data-bg="https://lh3.googleusercontent.com/aida-public/AB6AXuCr1lW9Z4QjPe-ziFmszG3xNzJk85jsi6Jj4qBvhWnru3_t_jyIqNOuOPeKz3K9SXqtWH-8mJTIchQwkZZKM6jasl3ClfmBkBRcOG8uLiX5daWXtp7rF8hsF1kRt4a1BjAfQwa9pHIxKN_xPr3Z6yrv7aP55aHGqpMylkzFIxi9kI232oaLgZTdJEWDSQjMbCZ6O_x0ck2sq8UzjjqCI7JlXAKW-r_0fh4Zz1SwRK54H0PgvFeZInVrLHtnmxgmvSHV23y-xTb1fzfJ"></div>
             <div class="p-6 flex-grow flex flex-col">
               <h3 class="text-lg font-bold mb-2">Проектирование систем пожаротушения</h3>
               <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование систем пожаротушения, включая спринклерные и другие типы.</p>
@@ -180,9 +179,7 @@
 
           <!-- 8 -->
           <article class="group bg-background-light dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
-            <div class="relative h-48 bg-cover bg-center" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdBF02Hw9T-W0a06cie40jU5BLCi5HdTTI6NlBZuG7PeeZUTFBpClseXYGny8GiSpHlzbUqQ5Rb8GmCBxH61gvjXcZJ9bABHC5Y2KpcTkPuwyUA8qyKekKHf3K7hQN1h4ffS7pELh6hI3KCheJzXVYNclpy9E9v_8sS2QxTJpo2y9nqjdeL87ESZdEMplUzOdrejFxoYp_wZby5rPmHd7X7vRmaeRxwbRF-eGrq2AE4DI5RzSQySDVcPQ3cZvqxWgfif-TdGQn7338");'>
-              <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
-            </div>
+            <div class="relative h-48 bg-cover bg-center js-bg" data-bg="https://lh3.googleusercontent.com/aida-public/AB6AXuCdBF02Hw9T-W0a06cie40jU5BLCi5HdTTI6NlBZuG7PeeZUTFBpClseXYGny8GiSpHlzbUqQ5Rb8GmCBxH61gvjXcZJ9bABHC5Y2KpcTkPuwyUA8qyKekKHf3K7hQN1h4ffS7pELh6hI3KCheJzXVYNclpy9E9v_8sS2QxTJpo2y9nqjdeL87ESZdEMplUzOdrejFxoYp_wZby5rPmHd7X7vRmaeRxwbRF-eGrq2AE4DI5RzSQySDVcPQ3cZvqxWgfif-TdGQn7338"></div>
             <div class="p-6 flex-grow flex flex-col">
               <h3 class="text-lg font-bold mb-2">Проектирование систем дымоудаления</h3>
               <p class="text-sm text-subtle-light dark:text-subtle-dark flex-grow">Проектирование систем дымоудаления для удаления дыма при пожаре.</p>
@@ -214,12 +211,31 @@
   </div>
 
   <script>
-    // Мобильное меню (единое для сайта)
+    // Мобильное меню
     const menuBtn = document.getElementById('menuBtn');
     const mobileNav = document.getElementById('mobileNav');
     if (menuBtn && mobileNav) {
       menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
     }
+
+    // Надёжная подстановка фоновых изображений с фолбэком
+    document.querySelectorAll('.js-bg').forEach(el => {
+      const url = el.getAttribute('data-bg');
+      if (!url) return;
+      const img = new Image();
+      img.onload = () => {
+        el.style.backgroundImage = `url("${url}")`;
+      };
+      img.onerror = () => {
+        // Фолбэк: градиент + иконка камеры
+        el.classList.add('bg-fallback');
+        el.innerHTML = `
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M9 3a1 1 0 00-.894.553L7.382 5H5a3 3 0 00-3 3v9a3 3 0 003 3h14a3 3 0 003-3V8a3 3 0 00-3-3h-2.382l-.724-1.447A1 1 0 0015 3H9zm3 5a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/>
+          </svg>`;
+      };
+      img.src = url;
+    });
   </script>
 </body>
 </html>
