@@ -1,22 +1,24 @@
-<script>
 /**
  * Вставляет partials (header/footer) + активирует моб.меню + подсвечивает активный пункт.
  * Работает с относительными путями: data-include="partials/header.html"
  */
-
 (async function insertPartials() {
   const containers = document.querySelectorAll('[data-include]');
   if (!containers.length) return;
 
-  await Promise.all([...containers].map(async el => {
+  await Promise.all(Array.from(containers).map(async el => {
     const url = el.getAttribute('data-include');
     if (!url) return;
     try {
       const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) {
+        console.error('Не удалось загрузить partial (HTTP ' + res.status + '):', url);
+        return;
+      }
       const html = await res.text();
       el.innerHTML = html;
     } catch (e) {
-      console.error('Не удалось загрузить partial:', url, e);
+      console.error('Ошибка загрузки partial:', url, e);
     }
   }));
 
@@ -25,7 +27,6 @@
 })();
 
 function currentFile() {
-  // Имя файла без пути, по умолчанию index.html
   let file = location.pathname.split('/').pop() || '';
   if (!file) file = 'index.html';
   return file.toLowerCase();
@@ -57,4 +58,3 @@ function setupMobileMenu() {
     menuBtn.setAttribute('aria-expanded', String(!hidden));
   });
 }
-</script>
