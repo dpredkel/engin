@@ -39,56 +39,8 @@
 <body class="font-display bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark">
   <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
 
-    <!-- Header (единый со всем сайтом) -->
-    <header class="sticky top-0 z-50 border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-      <div class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-          <a href="index.html" class="flex items-center gap-3">
-            <span class="inline-flex text-primary">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 1.5L2 7.5V16.5L12 22.5L22 16.5V7.5L12 1.5ZM4 8.6L12 13.2L20 8.6L12 4L4 8.6ZM12 14.8L4 10.2V15.4L12 20.1V14.8ZM14 20.1L20 15.4V10.2L12 14.8L14 20.1Z"></path>
-              </svg>
-            </span>
-            <span class="text-base sm:text-lg font-bold">Инжиниринг систем безопасности</span>
-          </a>
-
-          <!-- Desktop nav -->
-          <nav class="hidden md:flex items-center gap-6">
-            <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">О нас</a>
-            <a class="text-sm font-medium hover:text-primary transition-colors" href="services.html">Услуги</a>
-            <a class="text-sm font-medium hover:text-primary transition-colors" href="projects.html">Проекты</a>
-            <a class="text-sm font-medium hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
-            <a class="text-sm font-medium hover:text-primary transition-colors" href="contacts.html">Контакты</a>
-          </nav>
-
-          <div class="hidden md:flex items-center gap-3">
-            <a href="contacts.html#contact-form" class="rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-colors">
-              Заказать коммерческое предложение
-            </a>
-          </div>
-
-          <!-- Mobile menu button -->
-          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 border border-border-light dark:border-border-dark">
-            <span class="sr-only">Открыть меню</span>
-            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile nav -->
-      <nav id="mobileNav" class="md:hidden hidden border-t border-border-light dark:border-border-dark">
-        <div class="mx-auto max-w-[1200px] px-4 py-3 flex flex-col gap-2">
-          <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="about.html">О нас</a>
-          <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="services.html">Услуги</a>
-          <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="projects.html">Проекты</a>
-          <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
-          <a class="py-2 text-sm font-medium hover:text-primary transition-colors" href="contacts.html">Контакты</a>
-          <a class="py-2 text-sm font-bold text-white bg-primary rounded-lg text-center hover:bg-primary/90 transition-colors" href="contacts.html#contact-form">Запросить КП</a>
-        </div>
-      </nav>
-    </header>
+    <!-- Header -->
+    <div data-include="/partials/header.html"></div>
 
     <main class="flex-grow">
       <!-- Вводный блок -->
@@ -193,39 +145,11 @@
       </section>
     </main>
 
-    <!-- Footer (единый со всем сайтом) -->
-    <footer class="border-t border-border-light dark:border-border-dark py-10 px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-[1200px] flex flex-col md:flex-row items-center justify-between gap-6">
-        <a href="index.html" class="flex items-center gap-3">
-          <span class="inline-flex text-primary">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 1.5L2 7.5V16.5L12 22.5L22 16.5V7.5L12 1.5ZM4 8.6L12 13.2L20 8.6L12 4L4 8.6ZM12 14.8L4 10.2V15.4L12 20.1V14.8ZM14 20.1L20 15.4V10.2L12 14.8L14 20.1Z"></path>
-            </svg>
-          </span>
-          <span class="text-lg font-bold">Инжиниринг систем безопасности</span>
-        </a>
-        <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="about.html">О нас</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="services.html">Услуги</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="projects.html">Проекты</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html#licenses">Сертификаты</a>
-          <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="contacts.html">Контакты</a>
-        </nav>
-        <p class="text-sm text-subtle-light dark:text-subtle-dark text-center md:text-right">© 2025 Инжиниринг систем безопасности. Все права защищены.</p>
-      </div>
-      <div class="mx-auto max-w-[1200px] mt-6 text-center text-xs text-subtle-light dark:text-subtle-dark">
-        <p>УНП 123456789. г. Минск, ул. Примерная, 1, офис 101.</p>
-      </div>
-    </footer>
+    <!-- Footer include -->
+    <div data-include="/partials/footer.html"></div>
   </div>
 
-  <script>
-    // Мобильное меню (единое для сайта)
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    if (menuBtn && mobileNav) {
-      menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
-    }
-  </script>
+  <!-- Скрипт инклюда (подставит хедер/футер и активирует навигацию) -->
+  <script src="assets/include.js"></script>
 </body>
 </html>
