@@ -35,16 +35,7 @@
     }
   </script>
   <style>
-    body{font-family:'Inter',sans-serif}
-    /* Фолбэк для превью сертификата */
-    .cert-fallback{
-      position: relative;
-      background: radial-gradient(120% 120% at 80% 0%, rgba(13,57,89,.25), rgba(13,57,89,.55));
-    }
-    .cert-fallback svg{
-      position:absolute; inset:0; margin:auto; width:56px; height:56px; color:#fff;
-      filter: drop-shadow(0 3px 10px rgba(0,0,0,.25));
-    }
+    body { font-family:'Inter', sans-serif }
   </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
@@ -63,16 +54,13 @@
 
         <!-- Сетка сертификатов -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
           <!-- 1 -->
           <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <!-- Впишите реальный URL в data-src; оставьте пустым — будет фолбэк -->
-              <img class="js-cert absolute inset-0 h-full w-full object-cover" data-src="" alt="Сертификат соответствия №12345"/>
-              <div class="js-fallback hidden cert-fallback absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M17 3H7a2 2 0 00-2 2v13.5l7-3.11 7 3.11V5a2 2 0 00-2-2zm-2.5 5l-3.15 4.2-1.85-1.85L8 11.95l3 3 4.5-6L14.5 8z"/>
-                </svg>
-              </div>
+              <img class="absolute inset-0 h-full w-full object-cover"
+                   src="https://picsum.photos/400/600?random=1"
+                   alt="Сертификат соответствия №12345"/>
             </div>
             <div class="p-4">
               <h3 class="font-bold">Сертификат соответствия №12345</h3>
@@ -83,10 +71,9 @@
           <!-- 2 -->
           <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="js-cert absolute inset-0 h-full w-full object-cover" data-src="" alt="Лицензия МЧС №67890"/>
-              <div class="js-fallback hidden cert-fallback absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 3H7a2 2 0 00-2 2v13.5l7-3.11 7 3.11V5a2 2 0 00-2-2z"/></svg>
-              </div>
+              <img class="absolute inset-0 h-full w-full object-cover"
+                   src="https://picsum.photos/400/600?random=2"
+                   alt="Лицензия МЧС №67890"/>
             </div>
             <div class="p-4">
               <h3 class="font-bold">Лицензия МЧС №67890</h3>
@@ -97,10 +84,9 @@
           <!-- 3 -->
           <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="js-cert absolute inset-0 h-full w-full object-cover" data-src="" alt="Сертификат дилера №11223"/>
-              <div class="js-fallback hidden cert-fallback absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 3H7a2 2 0 00-2 2v13.5l7-3.11 7 3.11V5a2 2 0 00-2-2z"/></svg>
-              </div>
+              <img class="absolute inset-0 h-full w-full object-cover"
+                   src="https://picsum.photos/400/600?random=3"
+                   alt="Сертификат дилера №11223"/>
             </div>
             <div class="p-4">
               <h3 class="font-bold">Сертификат дилера №11223</h3>
@@ -111,10 +97,9 @@
           <!-- 4 -->
           <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="js-cert absolute inset-0 h-full w-full object-cover" data-src="" alt="Сертификат ISO 9001 №44556"/>
-              <div class="js-fallback hidden cert-fallback absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 3H7a2 2 0 00-2 2v13.5l7-3.11 7 3.11V5a2 2 0 00-2-2z"/></svg>
-              </div>
+              <img class="absolute inset-0 h-full w-full object-cover"
+                   src="https://picsum.photos/400/600?random=4"
+                   alt="Сертификат ISO 9001 №44556"/>
             </div>
             <div class="p-4">
               <h3 class="font-bold">Сертификат ISO 9001 №44556</h3>
@@ -125,10 +110,9 @@
           <!-- 5 -->
           <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="js-cert absolute inset-0 h-full w-full object-cover" data-src="" alt="Сертификат соответствия №77889"/>
-              <div class="js-fallback hidden cert-fallback absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 3H7a2 2 0 00-2 2v13.5l7-3.11 7 3.11V5a2 2 0 00-2-2z"/></svg>
-              </div>
+              <img class="absolute inset-0 h-full w-full object-cover"
+                   src="https://picsum.photos/400/600?random=5"
+                   alt="Сертификат соответствия №77889"/>
             </div>
             <div class="p-4">
               <h3 class="font-bold">Сертификат соответствия №77889</h3>
@@ -139,10 +123,9 @@
           <!-- 6 -->
           <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="js-cert absolute inset-0 h-full w-full object-cover" data-src="" alt="Лицензия ФСБ №10111"/>
-              <div class="js-fallback hidden cert-fallback absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 3H7a2 2 0 00-2 2v13.5l7-3.11 7 3.11V5a2 2 0 00-2-2z"/></svg>
-              </div>
+              <img class="absolute inset-0 h-full w-full object-cover"
+                   src="https://picsum.photos/400/600?random=6"
+                   alt="Лицензия ФСБ №10111"/>
             </div>
             <div class="p-4">
               <h3 class="font-bold">Лицензия ФСБ №10111</h3>
@@ -153,10 +136,9 @@
           <!-- 7 -->
           <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="js-cert absolute inset-0 h-full w-full object-cover" data-src="" alt="Допуск СРО №98765"/>
-              <div class="js-fallback hidden cert-fallback absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 3H7a2 2 0 00-2 2v13.5l7-3.11 7 3.11V5a2 2 0 00-2-2z"/></svg>
-              </div>
+              <img class="absolute inset-0 h-full w-full object-cover"
+                   src="https://picsum.photos/400/600?random=7"
+                   alt="Допуск СРО №98765"/>
             </div>
             <div class="p-4">
               <h3 class="font-bold">Допуск СРО №98765</h3>
@@ -167,20 +149,20 @@
           <!-- 8 -->
           <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="js-cert absolute inset-0 h-full w-full object-cover" data-src="" alt="Сертификат дистрибьютора №54321"/>
-              <div class="js-fallback hidden cert-fallback absolute inset-0">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 3H7a2 2 0 00-2 2v13.5l7-3.11 7 3.11V5a2 2 0 00-2-2z"/></svg>
-              </div>
+              <img class="absolute inset-0 h-full w-full object-cover"
+                   src="https://picsum.photos/400/600?random=8"
+                   alt="Сертификат дистрибьютора №54321"/>
             </div>
             <div class="p-4">
               <h3 class="font-bold">Сертификат дистрибьютора №54321</h3>
               <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Действителен до: 01.02.2025</p>
             </div>
           </article>
+
         </div>
 
         <div class="mt-8 text-xs text-subtle-light dark:text-subtle-dark">
-          <p>Добавьте URL изображений в атрибут <code>data-src</code> у каждого превью. Если URL отсутствует или не грузится — отобразится фолбэк.</p>
+          <p>Чтобы заменить плейсхолдеры, подставьте реальные пути к сканам в атрибут <code>src</code> у каждого изображения (например, <code>assets/certificates/cert-01.jpg</code>).</p>
         </div>
       </section>
     </main>
