@@ -1,7 +1,8 @@
 backend:
   name: github
-  repo: "dpredkel/engin"
+  repo: dpredkel/engin
   branch: main
+  base_url:  https://netlify-cms-github-oauth-provider-pink.vercel.app
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
