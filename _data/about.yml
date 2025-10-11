@@ -1,23 +1,25 @@
-company_title: "О компании"
-company_body: "ООО «Инжиниринг систем безопасности». Проектирование, экспертиза и сопровождение систем безопасности зданий. Работаем по СТБ/ГОСТ."
-experience_title: "Наш опыт"
-experience_body: "15 лет работы. Более 200 реализованных объектов. Сертификация ISO 9001, лицензии МЧС."
+company_title: О компании
+company_body: ООО «Инжиниринг систем безопасности». Проектирование, экспертиза и
+  сопровождение систем безопасности зданий. Работаем по СТБ/ГОСТ.
+experience_title: Наш опыт
+experience_body: 10 лет работы. Более 100 реализованных объектов. Сертификация
+  ISO 9001, лицензии МЧС.
 team:
-  - name: "Алексей Петров"
-    position: "Главный инженер"
-    image_url: "https://robohash.org/engin_by_1"
-  - name: "Дмитрий Смирнов"
-    position: "Менеджер проектов"
-    image_url: "https://robohash.org/engin_by_2"
-  - name: "Елена Иванова"
-    position: "Ведущий техник"
-    image_url: "https://robohash.org/engin_by_3"
-  - name: "Сергей Козлов"
-    position: "Консультант по безопасности"
-    image_url: "https://robohash.org/engin_by_4"
-  - name: "Мария Сидорова"
-    position: "Проектировщик систем"
-    image_url: "https://robohash.org/engin_by_5"
-  - name: "Андрей Волков"
-    position: "Руководитель монтажных работ"
-    image_url: "https://robohash.org/engin_by_6"
+  - name: Алексей Петров
+    position: Главный инженер
+    image_url: https://robohash.org/engin_by_1
+  - name: Дмитрий Смирнов
+    position: Менеджер проектов
+    image_url: https://robohash.org/engin_by_2
+  - name: Елена Иванова
+    position: Ведущий техник
+    image_url: https://robohash.org/engin_by_3
+  - name: Сергей Козлов
+    position: Консультант по безопасности
+    image_url: https://robohash.org/engin_by_4
+  - name: Мария Сидорова
+    position: Проектировщик систем
+    image_url: https://robohash.org/engin_by_5
+  - name: Андрей Волков
+    position: Руководитель монтажных работ
+    image_url: https://robohash.org/engin_by_6
