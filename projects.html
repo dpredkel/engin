@@ -12,6 +12,10 @@
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- js-yaml for parsing YAML data files -->
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  
   <script>
     tailwind.config = {
       darkMode: "class",
@@ -57,130 +61,8 @@
           </div>
         </div>
 
-        <!-- Cards -->
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-
-          <!-- 1 -->
-          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
-              <img class="h-full w-full object-cover" loading="lazy"
-                   src="https://picsum.photos/800/450?random=1"
-                   alt="Бизнес-центр «Аврора» — видеонаблюдение"/>
-            </div>
-            <div class="flex flex-1 flex-col justify-between p-6">
-              <div>
-                <p class="text-sm font-semibold text-primary">Объект: Бизнес-центр «Аврора»</p>
-                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Москва, 2023</p>
-                <dl class="mt-4 space-y-2 text-sm">
-                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Модернизация системы видеонаблюдения.</dd></div>
-                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Установка IP-камер высокого разрешения.</dd></div>
-                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Повышение уровня безопасности на 90%.</dd></div>
-                </dl>
-              </div>
-            </div>
-          </article>
-
-          <!-- 2 -->
-          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
-              <img class="h-full w-full object-cover" loading="lazy"
-                   src="https://picsum.photos/800/450?random=2"
-                   alt="ЖК «Невский Бриз» — интеграция СКУД и домофонии"/>
-            </div>
-            <div class="flex flex-1 flex-col justify-between p-6">
-              <div>
-                <p class="text-sm font-semibold text-primary">Объект: ЖК «Невский Бриз»</p>
-                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Санкт-Петербург, 2022</p>
-                <dl class="mt-4 space-y-2 text-sm">
-                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Интеграция СКУД и домофонии.</dd></div>
-                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">IP-домофония с контролем доступа.</dd></div>
-                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Единая система управления доступом.</dd></div>
-                </dl>
-              </div>
-            </div>
-          </article>
-
-          <!-- 3 -->
-          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
-              <img class="h-full w-full object-cover" loading="lazy"
-                   src="https://picsum.photos/800/450?random=3"
-                   alt="Завод «Технопром» — организация ОПС"/>
-            </div>
-            <div class="flex flex-1 flex-col justify-between p-6">
-              <div>
-                <p class="text-sm font-semibold text-primary">Объект: Завод «Технопром»</p>
-                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Казань, 2021</p>
-                <dl class="mt-4 space-y-2 text-sm">
-                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Организация пожарной сигнализации.</dd></div>
-                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Адресная система ОПС.</dd></div>
-                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Соответствие нормам пожарной безопасности.</dd></div>
-                </dl>
-              </div>
-            </div>
-          </article>
-
-          <!-- 4 -->
-          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
-              <img class="h-full w-full object-cover" loading="lazy"
-                   src="https://picsum.photos/800/450?random=4"
-                   alt="ТРЦ «Сибирь» — интегрированная система безопасности"/>
-            </div>
-            <div class="flex flex-1 flex-col justify-between p-6">
-              <div>
-                <p class="text-sm font-semibold text-primary">Объект: ТРЦ «Сибирь»</p>
-                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Новосибирск, 2020</p>
-                <dl class="mt-4 space-y-2 text см">
-                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Комплексная система безопасности.</dd></div>
-                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Интеграция видеонаблюдения, СКУД и ОПС.</dd></div>
-                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Централизованный мониторинг и управление.</dd></div>
-                </dl>
-              </div>
-            </div>
-          </article>
-
-          <!-- 5 -->
-          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
-              <img class="h-full w-full object-cover" loading="lazy"
-                   src="https://picsum.photos/800/450?random=5"
-                   alt="Университет УрФУ — контроль доступа"/>
-            </div>
-            <div class="flex flex-1 flex-col justify-between p-6">
-              <div>
-                <p class="text-sm font-semibold text-primary">Объект: Университет УрФУ</p>
-                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Екатеринбург, 2019</p>
-                <dl class="mt-4 space-y-2 text-sm">
-                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Обеспечение безопасности корпусов.</dd></div>
-                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Контроль доступа в учебные аудитории.</dd></div>
-                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Безопасная среда для студентов.</dd></div>
-                </dl>
-              </div>
-            </div>
-          </article>
-
-          <!-- 6 -->
-          <article class="flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
-              <img class="h-full w-full object-cover" loading="lazy"
-                   src="https://picsum.photos/800/450?random=6"
-                   alt="Областная больница — биометрический доступ"/>
-            </div>
-            <div class="flex flex-1 flex-col justify-between п-6">
-              <div>
-                <p class="text-sm font-semibold text-primary">Объект: Областная больница</p>
-                <p class="text-sm text-subtle-light dark:text-subtle-dark">г. Нижний Новгород, 2018</p>
-                <dl class="mt-4 space-y-2 text-sm">
-                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Контроль доступа в служебные помещения.</dd></div>
-                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Биометрические считыватели.</dd></div>
-                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">Защита материальных ценностей.</dd></div>
-                </dl>
-              </div>
-            </div>
-          </article>
-
-        </div>
+        <!-- Cards - Projects will be loaded dynamically from _data/projects.yml -->
+        <div id="projects-container" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"></div>
       </section>
     </main>
 
@@ -190,5 +72,50 @@
 
   <!-- Скрипт инклюда (подставит хедер/футер и активирует навигацию) -->
   <script src="assets/include.js"></script>
+  
+  <!-- Dynamic content loading from _data/projects.yml -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      try {
+        const response = await fetch('_data/projects.yml');
+        if (!response.ok) throw new Error('Failed to load projects data');
+        
+        const yamlText = await response.text();
+        const data = jsyaml.load(yamlText);
+        
+        const container = document.getElementById('projects-container');
+        container.innerHTML = ''; // Clear existing content
+        
+        data.projects.forEach(project => {
+          const article = document.createElement('article');
+          article.className = 'flex flex-col overflow-hidden rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow';
+          
+          article.innerHTML = `
+            <div class="aspect-video w-full bg-black/5 dark:bg-white/5">
+              <img class="h-full w-full object-cover" loading="lazy"
+                   src="${project.image_url}"
+                   alt="${project.object_name}"/>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <p class="text-sm font-semibold text-primary">Объект: ${project.object_name}</p>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">${project.location}, ${project.year}</p>
+                <dl class="mt-4 space-y-2 text-sm">
+                  <div><dt class="inline font-semibold">Задача: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">${project.task}</dd></div>
+                  <div><dt class="inline font-semibold">Решение: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">${project.solution}</dd></div>
+                  <div><dt class="inline font-semibold">Результат: </dt><dd class="inline text-subtle-light dark:text-subtle-dark">${project.result}</dd></div>
+                </dl>
+              </div>
+            </div>
+          `;
+          
+          container.appendChild(article);
+        });
+        
+      } catch (error) {
+        console.error('Error loading projects data:', error);
+      }
+    });
+  </script>
 </body>
 </html>

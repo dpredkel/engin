@@ -1,0 +1,33 @@
+services:
+  - title: "Проектирование систем пожарной безопасности"
+    description: "Комплексное проектирование систем пожарной безопасности для зданий и сооружений."
+    image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuAOa1DI9NL-zNZ7t9xrQgXYgBarw3o2S0o_gKJD_kV4pnEsFEesOC9O9meH5JhS9yIZOM_3QI2DR4WAKEPAOBhWK9f_QSToUaVWgHnMo-RO4Bj1TujOO8r7vS20MnhPPLH0mu6DSAh7hsdDyJyTHNAqUjAAw0IpEMqCkfCM7yF_QIZP68Yh1lJnYyBWG_T_0byXgfzrhqMFesJS8-ZBwMhaLLg-6hidJTQENibJH1mcFCuyvnzpwcseaz9kM08dUagJQzZrgOXoRffU"
+  
+  - title: "Проектирование охранной сигнализации"
+    description: "Проектирование систем охранной сигнализации для защиты от несанкционированного доступа."
+    image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuAt4zt69pqKkuC-LcZdA3T36-ElXuaFI1O-SFr0DbAjLq8q499MB1JvLSsGyKvsUjwdP9YRRkdm2MMXj0PF08RinE4lcbaTLU31n884UOfu_lqAgZD5MV3uY8FTwZCT46f7u-MjJk_ZPIJTmj-ORRvlYjHFDP0v9CNRdj2RhUrG883oyH8HY1oUCQLjNLuAkrmqO98dY9P9abOp4aOOMUJktgU9PlSwcO9o3iupHQh2y9Bg_4mW2tquNu3BRmxw3Zv1cbbWOBauyz98"
+  
+  - title: "Проектирование систем контроля доступа"
+    description: "Проектирование СКУД для управления и мониторинга точек входа."
+    image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuDIG_KLrGdZuGI1M83GRuUv1Oe_sxRjYUmVr6PpFWFviR1c6mNCQk4l8oLo4R9pGO_jC99xDVSkEofrmeZR__quKt2ZQDCz9RSJt_8Vjh-CNOyszbHnr_Y-J523KKlHspMXYdNWATmjhqu4datAbSPGt7EfmdyJejnUzIoCaV75Svo5wcRWh-gLW-IiELbr1feHA6NjgnmDKBNtiJQ74BLxSCTj8gi9u0NbRTbeO-WLVYHkJepvvcOHtwIiYzfaKQsQHahmoAANHdxr"
+  
+  - title: "Проектирование систем видеонаблюдения"
+    description: "Проектирование систем видеонаблюдения для мониторинга и записи."
+    image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-3C4ZRT4IaGC2Ghuj3cFcUaFiNpUVpUZJN7JPt8gMMIvNkKF1b4lIEZyRkMFElKcla1G1PDeTH164TQ959I4IIgtBHO0ggH73yuuJ2re7rPl2PVd7OEaWVHgPH0QdQHbzjqUgOkP87aKd-kESMi99qMjhiQwdGmuh5t7B_zTOWH9Gc5jSIjsd6zVZInY8Ae_EVwJhqZfFRtne2888ZZ1qQBdJr5VQh4-5casQaIAzxNOtxHhMWEeDjrUyJZMd92OQopjs4i30mhAD"
+  
+  - title: "Проектирование интегрированных систем"
+    description: "Проектирование интегрированных систем безопасности, объединяющих различные подсистемы."
+    image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuBJVd-fgx3iA7rJNQxkAPEgEbJZtJP2uybTPBe3WxTsjXGuva99XD30lv-Y7KEZ8Qbglgx8twyANcGftXRq17MP591NuDD5WNoxotrYObT6F8Tdc1VB8WU9W8CbaeHjNqgzPi2Kvf6DGdKSFei8-ZbdVnj4Q175EcZ4p67I7Bh0zo02ILhX4Wzp3idWsONHPwkN_sW6HwVwqn7zipMBfKIScAT8y1SInn9LmFuGwMYuDk9-qXsggiSam1YtsSeeeFZYVvYC1_R0jUlg"
+  
+  - title: "Проектирование охраны периметра"
+    description: "Проектирование систем охраны периметра для защиты внешних границ объекта."
+    image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9PKNbFZ8CgltP5fqqb8fdh0caKXwzMt4lv-CQ3aYw93v-9ttzQ8Mj52wq-p5PG2dFIMz2oQB51W_CrX6xNWlgReigQHa-5lUxY55UwWdi_QUyX5girB8FURgCDl-ewzI697Rsetc1WY_0hnxAYYPmuRjntXRngdCciXjwaoGG26bk2cGYJ-vj9iC60Hs93qGXZ77WMwgzZh5KF3MRha861L5NoHMLpNEThc9ia9939BOz7z8-2wfvZvi_2DfYnZoFpg7b9q33X6Rn"
+  
+  - title: "Проектирование систем пожаротушения"
+    description: "Проектирование систем пожаротушения, включая спринклерные и другие типы."
+    image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuCr1lW9Z4QjPe-ziFmszG3xNzJk85jsi6Jj4qBvhWnru3_t_jyIqNOuOPeKz3K9SXqtWH-8mJTIchQwkZZKM6jasl3ClfmBkBRcOG8uLiX5daWXtp7rF8hsF1kRt4a1BjAfQwa9pHIxKN_xPr3Z6yrv7aP55aHGqpMylkzFIxi9kI232oaLgZTdJEWDSQjMbCZ6O_x0ck2sq8UzjjqCI7JlXAKW-r_0fh4Zz1SwRK54H0PgvFeZInVrLHtnmxgmvSHV23y-xTb1fzfJ"
+  
+  - title: "Проектирование систем дымоудаления"
+    description: "Проектирование систем дымоудаления для удаления дыма при пожаре."
+    image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuCdBF02Hw9T-W0a06cie40jU5BLCi5HdTTI6NlBZuG7PeeZUTFBpClseXYGny8GiSpHlzbUqQ5Rb8GmCBxH61gvjXcZJ9bABHC5Y2KpcTkPuwyUA8qyKekKHf3K7hQN1h4ffS7pELh6hI3KCheJzXVYNclpy9E9v_8sS2QxTJpo2y9nqjdeL87ESZdEMplUzOdrejFxoYp_wZby5rPmHd7X7vRmaeRxwbRF-eGrq2AE4DI5RzSQySDVcPQ3cZvqxWgfif-TdGQn7338"
+

@@ -12,6 +12,10 @@
 
   <!-- Tailwind (единый конфиг по всему сайту) -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- js-yaml for parsing YAML data files -->
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  
   <script>
     tailwind.config = {
       darkMode: "class",
@@ -52,114 +56,8 @@
           Скан-копии сертификатов и лицензий. По запросу предоставим заверенные копии.
         </p>
 
-        <!-- Сетка сертификатов -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-
-          <!-- 1 -->
-          <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="absolute inset-0 h-full w-full object-cover"
-                   src="https://picsum.photos/400/600?random=1"
-                   alt="Сертификат соответствия №12345"/>
-            </div>
-            <div class="p-4">
-              <h3 class="font-bold">Сертификат соответствия №12345</h3>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Действителен до: 31.12.2024</p>
-            </div>
-          </article>
-
-          <!-- 2 -->
-          <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="absolute inset-0 h-full w-full object-cover"
-                   src="https://picsum.photos/400/600?random=2"
-                   alt="Лицензия МЧС №67890"/>
-            </div>
-            <div class="p-4">
-              <h3 class="font-bold">Лицензия МЧС №67890</h3>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Действительна до: 15.06.2025</p>
-            </div>
-          </article>
-
-          <!-- 3 -->
-          <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="absolute inset-0 h-full w-full object-cover"
-                   src="https://picsum.photos/400/600?random=3"
-                   alt="Сертификат дилера №11223"/>
-            </div>
-            <div class="p-4">
-              <h3 class="font-bold">Сертификат дилера №11223</h3>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Действителен до: 20.11.2024</p>
-            </div>
-          </article>
-
-          <!-- 4 -->
-          <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="absolute inset-0 h-full w-full object-cover"
-                   src="https://picsum.photos/400/600?random=4"
-                   alt="Сертификат ISO 9001 №44556"/>
-            </div>
-            <div class="p-4">
-              <h3 class="font-bold">Сертификат ISO 9001 №44556</h3>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Действителен до: 10.03.2025</p>
-            </div>
-          </article>
-
-          <!-- 5 -->
-          <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="absolute inset-0 h-full w-full object-cover"
-                   src="https://picsum.photos/400/600?random=5"
-                   alt="Сертификат соответствия №77889"/>
-            </div>
-            <div class="p-4">
-              <h3 class="font-bold">Сертификат соответствия №77889</h3>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Действителен до: 05.10.2024</p>
-            </div>
-          </article>
-
-          <!-- 6 -->
-          <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="absolute inset-0 h-full w-full object-cover"
-                   src="https://picsum.photos/400/600?random=6"
-                   alt="Лицензия ФСБ №10111"/>
-            </div>
-            <div class="p-4">
-              <h3 class="font-bold">Лицензия ФСБ №10111</h3>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Действительна до: 22.01.2025</p>
-            </div>
-          </article>
-
-          <!-- 7 -->
-          <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="absolute inset-0 h-full w-full object-cover"
-                   src="https://picsum.photos/400/600?random=7"
-                   alt="Допуск СРО №98765"/>
-            </div>
-            <div class="p-4">
-              <h3 class="font-bold">Допуск СРО №98765</h3>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Действителен до: 18.08.2026</p>
-            </div>
-          </article>
-
-          <!-- 8 -->
-          <article class="group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow">
-            <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
-              <img class="absolute inset-0 h-full w-full object-cover"
-                   src="https://picsum.photos/400/600?random=8"
-                   alt="Сертификат дистрибьютора №54321"/>
-            </div>
-            <div class="p-4">
-              <h3 class="font-bold">Сертификат дистрибьютора №54321</h3>
-              <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Действителен до: 01.02.2025</p>
-            </div>
-          </article>
-
-        </div>
+        <!-- Сетка сертификатов - Certificates will be loaded dynamically from _data/certifications.yml -->
+        <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
       </section>
     </main>
 
@@ -169,5 +67,43 @@
 
   <!-- Скрипт инклюда (подставит хедер/футер и активирует навигацию) -->
   <script src="assets/include.js"></script>
+  
+  <!-- Dynamic content loading from _data/certifications.yml -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      try {
+        const response = await fetch('_data/certifications.yml');
+        if (!response.ok) throw new Error('Failed to load certifications data');
+        
+        const yamlText = await response.text();
+        const data = jsyaml.load(yamlText);
+        
+        const container = document.getElementById('certificates-container');
+        container.innerHTML = ''; // Clear existing content
+        
+        data.certificates.forEach(cert => {
+          const article = document.createElement('article');
+          article.className = 'group overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow';
+          
+          article.innerHTML = `
+            <div class="relative w-full aspect-[3/4] bg-black/5 dark:bg-white/5">
+              <img class="absolute inset-0 h-full w-full object-cover"
+                   src="${cert.image_url}"
+                   alt="${cert.name} ${cert.number}"/>
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold">${cert.name} ${cert.number}</h3>
+              <p class="text-sm text-subtle-light dark:text-subtle-dark mt-1">Действителен до: ${cert.valid_until}</p>
+            </div>
+          `;
+          
+          container.appendChild(article);
+        });
+        
+      } catch (error) {
+        console.error('Error loading certifications data:', error);
+      }
+    });
+  </script>
 </body>
 </html>
