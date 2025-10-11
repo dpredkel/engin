@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: "dpredkel/engin"
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "_data/about.yml"
+        fields:
+          - { label: "Company Title", name: "company_title", widget: "string" }
+          - { label: "Company Body", name: "company_body", widget: "text" }
+          - { label: "Experience Title", name: "experience_title", widget: "string" }
+          - { label: "Experience Body", name: "experience_body", widget: "text" }
+          - label: "Team"
+            name: "team"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Position", name: "position", widget: "string" }
+              - { label: "Image URL", name: "image_url", widget: "string" }
+

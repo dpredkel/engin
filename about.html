@@ -12,6 +12,10 @@
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- js-yaml for parsing YAML data files -->
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  
   <script>
     tailwind.config = {
       darkMode: "class",
@@ -50,12 +54,12 @@
             <h1 class="text-4xl font-bold mb-6">О нас</h1>
             <div class="space-y-8 text-subtle-light dark:text-subtle-dark">
               <section>
-                <h2 class="text-2xl font-bold mb-4 text-foreground-light dark:text-foreground-dark">О компании</h2>
-                <p>ООО «Инжиниринг систем безопасности». Проектирование, экспертиза и сопровождение систем безопасности зданий. Работаем по СТБ/ГОСТ.</p>
+                <h2 id="company-title" class="text-2xl font-bold mb-4 text-foreground-light dark:text-foreground-dark">О компании</h2>
+                <p id="company-body">ООО «Инжиниринг систем безопасности». Проектирование, экспертиза и сопровождение систем безопасности зданий. Работаем по СТБ/ГОСТ.</p>
               </section>
               <section>
-                <h2 class="text-2xl font-bold mb-4 text-foreground-light dark:text-foreground-dark">Наш опыт</h2>
-                <p>15 лет работы. Более 200 реализованных объектов. Сертификация ISO 9001, лицензии МЧС.</p>
+                <h2 id="experience-title" class="text-2xl font-bold mb-4 text-foreground-light dark:text-foreground-dark">Наш опыт</h2>
+                <p id="experience-body">15 лет работы. Более 200 реализованных объектов. Сертификация ISO 9001, лицензии МЧС.</p>
               </section>
             </div>
           </div>
@@ -108,55 +112,8 @@
         <div class="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div class="rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark p-8">
             <h2 class="text-3xl font-bold text-center mb-10">Наша команда</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
-  <div class="text-center">
-    <img alt="Алексей Петров" loading="lazy"
-         class="mx-auto h-40 w-40 rounded-full object-cover"
-         src="https://i.pravatar.cc/160?img=12" />
-    <h3 class="mt-4 text-xl font-bold">Алексей Петров</h3>
-    <p class="mt-1 text-primary">Главный инженер</p>
-  </div>
-
-  <div class="text-center">
-    <img alt="Дмитрий Смирнов" loading="lazy"
-         class="mx-auto h-40 w-40 rounded-full object-cover"
-         src="https://i.pravatar.cc/160?img=15" />
-    <h3 class="mt-4 text-xl font-bold">Дмитрий Смирнов</h3>
-    <p class="mt-1 text-primary">Менеджер проектов</p>
-  </div>
-
-  <div class="text-center">
-    <img alt="Елена Иванова" loading="lazy"
-         class="mx-auto h-40 w-40 rounded-full object-cover"
-         src="https://i.pravatar.cc/160?img=47" />
-    <h3 class="mt-4 text-xl font-bold">Елена Иванова</h3>
-    <p class="mt-1 text-primary">Ведущий техник</p>
-  </div>
-
-  <div class="text-center">
-    <img alt="Сергей Козлов" loading="lazy"
-         class="mx-auto h-40 w-40 rounded-full object-cover"
-         src="https://i.pravatar.cc/160?img=33" />
-    <h3 class="mt-4 text-xl font-bold">Сергей Козлов</h3>
-    <p class="mt-1 text-primary">Консультант по безопасности</p>
-  </div>
-
-  <div class="text-center">
-    <img alt="Мария Сидорова" loading="lazy"
-         class="mx-auto h-40 w-40 rounded-full object-cover"
-         src="https://i.pravatar.cc/160?img=57" />
-    <h3 class="mt-4 text-xl font-bold">Мария Сидорова</h3>
-    <p class="mt-1 text-primary">Проектировщик систем</p>
-  </div>
-
-  <div class="text-center">
-    <img alt="Андрей Волков" loading="lazy"
-         class="mx-auto h-40 w-40 rounded-full object-cover"
-         src="https://i.pravatar.cc/160?img=32" />
-    <h3 class="mt-4 text-xl font-bold">Андрей Волков</h3>
-    <p class="mt-1 text-primary">Руководитель монтажных работ</p>
-  </div>
-</div>
+            <!-- Team members will be loaded dynamically from _data/about.yml -->
+            <div id="team-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12"></div>
           </div>
         </div>
       </section>
@@ -168,5 +125,61 @@
 
   <!-- Скрипт инклюда (подставит хедер/футер и активирует навигацию) -->
   <script src="assets/include.js"></script>
+  
+  <!-- Dynamic content loading from _data/about.yml -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      try {
+        // Fetch the YAML data file
+        const response = await fetch('_data/about.yml');
+        if (!response.ok) {
+          throw new Error('Failed to load about data');
+        }
+        
+        // Parse the YAML content
+        const yamlText = await response.text();
+        const data = jsyaml.load(yamlText);
+        
+        // Inject the content into the page
+        document.getElementById('company-title').textContent = data.company_title;
+        document.getElementById('company-body').textContent = data.company_body;
+        document.getElementById('experience-title').textContent = data.experience_title;
+        document.getElementById('experience-body').textContent = data.experience_body;
+        
+        // Populate the team members
+        const teamContainer = document.getElementById('team-container');
+        teamContainer.innerHTML = ''; // Clear existing content
+        
+        data.team.forEach(member => {
+          const memberDiv = document.createElement('div');
+          memberDiv.className = 'text-center';
+          
+          const img = document.createElement('img');
+          img.alt = member.name;
+          img.loading = 'lazy';
+          img.className = 'mx-auto h-40 w-40 rounded-full object-cover';
+          img.src = member.image_url;
+          
+          const nameHeading = document.createElement('h3');
+          nameHeading.className = 'mt-4 text-xl font-bold';
+          nameHeading.textContent = member.name;
+          
+          const positionPara = document.createElement('p');
+          positionPara.className = 'mt-1 text-primary';
+          positionPara.textContent = member.position;
+          
+          memberDiv.appendChild(img);
+          memberDiv.appendChild(nameHeading);
+          memberDiv.appendChild(positionPara);
+          
+          teamContainer.appendChild(memberDiv);
+        });
+        
+      } catch (error) {
+        console.error('Error loading about page data:', error);
+        // Fallback: keep the existing hardcoded content
+      }
+    });
+  </script>
 </body>
 </html>
