@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
+publish_mode: editorial_workflow
+
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
@@ -27,7 +29,10 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Position", name: "position", widget: "string" }
-              - { label: "Image URL", name: "image_url", widget: "string" }
+              - label: "Image URL"
+                name: "image_url"
+                widget: "string"
+                pattern: ["^https?://[^\\s]+$", "Введите корректный URL (https://...)"]
       
       # Contacts Page
       - label: "Contacts Page"
@@ -40,7 +45,10 @@ collections:
           - { label: "Phone", name: "phone", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Working Hours", name: "working_hours", widget: "string" }
-          - { label: "Map URL", name: "map_url", widget: "string" }
+          - label: "Map URL"
+            name: "map_url"
+            widget: "string"
+            pattern: ["^https?://[^\\s]+$", "Введите корректный URL (https://...)"]
       
       # Services Page
       - label: "Services Page"
@@ -53,7 +61,10 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
-              - { label: "Image URL", name: "image_url", widget: "string" }
+              - label: "Image URL"
+                name: "image_url"
+                widget: "string"
+                pattern: ["^https?://[^\\s]+$", "Введите корректный URL (https://...)"]
       
       # Projects Page
       - label: "Projects Page"
@@ -70,7 +81,10 @@ collections:
               - { label: "Task", name: "task", widget: "text" }
               - { label: "Solution", name: "solution", widget: "text" }
               - { label: "Result", name: "result", widget: "text" }
-              - { label: "Image URL", name: "image_url", widget: "string" }
+              - label: "Image URL"
+                name: "image_url"
+                widget: "string"
+                pattern: ["^https?://[^\\s]+$", "Введите корректный URL (https://...)"]
       
       # Certifications Page
       - label: "Certifications Page"
@@ -84,5 +98,8 @@ collections:
               - { label: "Certificate Name", name: "name", widget: "string" }
               - { label: "Certificate Number", name: "number", widget: "string" }
               - { label: "Valid Until", name: "valid_until", widget: "string" }
-              - { label: "Image URL", name: "image_url", widget: "string" }
+              - label: "Image URL"
+                name: "image_url"
+                widget: "string"
+                pattern: ["^https?://[^\\s]+$", "Введите корректный URL (https://...)"]
 

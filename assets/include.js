@@ -1,50 +1,50 @@
 /**
- * Вставляет partials (header/footer) + активирует моб.меню + подсвечивает активный пункт.
- * Работает с относительными путями: data-include="partials/header.html"
+ * assets/include.js
+ * Inserts partials (header/footer), highlights active nav, and sets up mobile menu.
+ * Caches partials aggressively and avoids layout thrash.
  */
 (async function insertPartials() {
   const containers = document.querySelectorAll('[data-include]');
   if (!containers.length) return;
 
+  // Pre-fetch all unique partial URLs and reuse responses
+  const urls = [...new Set(Array.from(containers, el => el.getAttribute('data-include')).filter(Boolean))];
+  const cache = new Map();
+
+  async function get(url) {
+    if (cache.has(url)) return cache.get(url);
+    // Let the browser & Netlify headers cache partials. Use ETag revalidation.
+    const res = await fetch(url, { credentials: 'same-origin' });
+    if (!res.ok) throw new Error(`Failed to load partial (${res.status}): ${url}`);
+    const html = await res.text();
+    cache.set(url, html);
+    return html;
+  }
+
+  // Build a document fragment to minimize reflows
   await Promise.all(Array.from(containers).map(async el => {
     const url = el.getAttribute('data-include');
-    if (!url) return;
     try {
-      const res = await fetch(url, { cache: 'no-store' });
-      if (!res.ok) {
-        console.error('Не удалось загрузить partial (HTTP ' + res.status + '):', url);
-        return;
-      }
-      const html = await res.text();
-      el.innerHTML = html;
+      const html = await get(url);
+      const tpl = document.createElement('template');
+      tpl.innerHTML = html;
+      el.replaceChildren(tpl.content.cloneNode(true));
     } catch (e) {
-      console.error('Ошибка загрузки partial:', url, e);
+      console.error(e);
     }
   }));
 
-  setupActiveLinks();
+  setupActiveNav();
   setupMobileMenu();
 })();
 
-function currentFile() {
-  let file = location.pathname.split('/').pop() || '';
-  if (!file) file = 'index.html';
-  return file.toLowerCase();
-}
-
-function setupActiveLinks() {
-  const current = currentFile();
-  document.querySelectorAll('[data-nav]').forEach(nav => {
-    nav.querySelectorAll('[data-navlink]').forEach(a => {
-      const target = (a.getAttribute('data-navlink') || '').toLowerCase();
-      const isActive =
-        (current === 'index.html' && target === 'index.html') ||
-        (current !== 'index.html' && current === target);
-
-      a.classList.toggle('text-primary', isActive);
-      a.classList.toggle('font-bold', isActive);
-      if (isActive) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
-    });
+function setupActiveNav() {
+  const current = location.pathname.replace(/\/index\.html?$/, '/');
+  document.querySelectorAll('a[data-nav]').forEach(a => {
+    try {
+      const href = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/index\.html?$/, '/');
+      if (href === current) a.classList.add('active');
+    } catch {}
   });
 }
 
@@ -53,8 +53,12 @@ function setupMobileMenu() {
   const mobileNav = document.getElementById('mobileNav');
   if (!menuBtn || !mobileNav) return;
 
+  // Reflect initial state for a11y
+  menuBtn.setAttribute('aria-expanded', 'false');
+
   menuBtn.addEventListener('click', () => {
     const hidden = mobileNav.classList.toggle('hidden');
     menuBtn.setAttribute('aria-expanded', String(!hidden));
+    if (!hidden) mobileNav.querySelector('a, button')?.focus();
   });
 }
