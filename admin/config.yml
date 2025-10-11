@@ -27,7 +27,14 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Position", name: "position", widget: "string" }
-              - { label: "Image URL", name: "image_url", widget: "string" }
+              - label: "Photo"
+                name: "image_url"
+                widget: "image"
+                choose_url: true
+                allow_multiple: false
+                media_library:
+                  config:
+                    multiple: false
       
       # Contacts Page
       - label: "Contacts Page"
@@ -40,8 +47,12 @@ collections:
           - { label: "Phone", name: "phone", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Working Hours", name: "working_hours", widget: "string" }
-          - { label: "Map URL", name: "map_url", widget: "string" }
-      
+          - label: "Map Image / Screenshot"
+            name: "map_url"
+            widget: "image"
+            choose_url: true
+            allow_multiple: false
+
       # Services Page
       - label: "Services Page"
         name: "services"
@@ -53,8 +64,12 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
-              - { label: "Image URL", name: "image_url", widget: "string" }
-      
+              - label: "Service Image"
+                name: "image_url"
+                widget: "image"
+                choose_url: true
+                allow_multiple: false
+
       # Projects Page
       - label: "Projects Page"
         name: "projects"
@@ -70,8 +85,12 @@ collections:
               - { label: "Task", name: "task", widget: "text" }
               - { label: "Solution", name: "solution", widget: "text" }
               - { label: "Result", name: "result", widget: "text" }
-              - { label: "Image URL", name: "image_url", widget: "string" }
-      
+              - label: "Project Image"
+                name: "image_url"
+                widget: "image"
+                choose_url: true
+                allow_multiple: false
+
       # Certifications Page
       - label: "Certifications Page"
         name: "certifications"
@@ -84,5 +103,8 @@ collections:
               - { label: "Certificate Name", name: "name", widget: "string" }
               - { label: "Certificate Number", name: "number", widget: "string" }
               - { label: "Valid Until", name: "valid_until", widget: "string" }
-              - { label: "Image URL", name: "image_url", widget: "string" }
-
+              - label: "Certificate Image"
+                name: "image_url"
+                widget: "image"
+                choose_url: true
+                allow_multiple: false
