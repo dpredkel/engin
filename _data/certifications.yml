@@ -3,10 +3,10 @@ certificates:
     number: регистрационный номер 691773203
     valid_until: 11.09.2014
     image_url: /assets/images/uploads/свидетельство-о-регистрации-11.09.2014.jpg
-  - name: Лицензия МЧС
-    number: №67890
-    valid_until: 15.06.2025
-    image_url: https://picsum.photos/400/600
+  - name: Аттестат соотвествия на право осуществления функций генпроектировщика
+    number: №0002559-ГП
+    valid_until: 7.05.2030
+    image_url: /assets/images/uploads/аттестат_гп_2025.jpg
   - name: Сертификат дилера
     number: №11223
     valid_until: 20.11.2024
