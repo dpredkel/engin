@@ -1,8 +1,8 @@
 certificates:
-  - name: Сертификат соответствия
-    number: №12345
-    valid_until: 31.12.2024
-    image_url: https://picsum.photos/400/600
+  - name: Свидетельство о госрегистрации
+    number: регистрационный номер 691773203
+    valid_until: 11.09.2014
+    image_url: /assets/images/uploads/свидетельство-о-регистрации-11.09.2014.jpg
   - name: Лицензия МЧС
     number: №67890
     valid_until: 15.06.2025
