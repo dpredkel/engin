@@ -7,10 +7,10 @@ certificates:
     number: №0002559-ГП
     valid_until: 7.05.2030
     image_url: /assets/images/uploads/аттестат_гп_2025.jpg
-  - name: Сертификат дилера
-    number: №11223
-    valid_until: 20.11.2024
-    image_url: https://picsum.photos/400/600
+  - name: Аттестат соотвествия на разработку разделов проектной документации
+    number: №0005213-ПР
+    valid_until: 7.05.2030
+    image_url: /assets/images/uploads/аттестат_пр_2025.jpg
   - name: Сертификат ISO 9001
     number: №BY/112 05.01. 003.01 01033
     valid_until: 18.02.2027
