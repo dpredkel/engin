@@ -14,7 +14,7 @@ certificates:
   - name: Сертификат ISO 9001
     number: №BY/112 05.01. 003.01 01033
     valid_until: 18.02.2027
-    image_url: /assets/images/uploads/сертификат-смк_19.02.2024_img_0.jpg
+    image_url: /assets/images/uploads/сертификат-смк_19.02.2024.jpg
   - name: Сертификат соответствия
     number: №77889
     valid_until: 05.10.2024
