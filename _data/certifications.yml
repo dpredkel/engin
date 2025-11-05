@@ -1,7 +1,7 @@
 certificates:
   - name: Свидетельство о госрегистрации
     number: регистрационный номер 691773203
-    valid_until: 11.09.2014
+    valid_until: н/н
     image_url: /assets/images/uploads/свидетельство-о-регистрации-11.09.2014.jpg
   - name: Аттестат соотвествия на право осуществления функций генпроектировщика
     number: №0002559-ГП
@@ -19,7 +19,7 @@ certificates:
       безопасности
     number: №33130/3339
     valid_until: н/н
-    image_url: /assets/images/uploads/аттестат_гп_2025.jpg
+    image_url: /assets/images/uploads/лицензия_мчс_-на-2-л._страница_1.jpg
   - name: Лицензия ФСБ
     number: №10111
     valid_until: 22.01.2025
