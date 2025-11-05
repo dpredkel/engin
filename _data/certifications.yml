@@ -1,41 +1,33 @@
 certificates:
-  - name: "Сертификат соответствия"
-    number: "№12345"
-    valid_until: "31.12.2024"
-    image_url: "https://picsum.photos/400/600"
-  
-  - name: "Лицензия МЧС"
-    number: "№67890"
-    valid_until: "15.06.2025"
-    image_url: "https://picsum.photos/400/600"
-  
-  - name: "Сертификат дилера"
-    number: "№11223"
-    valid_until: "20.11.2024"
-    image_url: "https://picsum.photos/400/600"
-  
-  - name: "Сертификат ISO 9001"
-    number: "№44556"
-    valid_until: "10.03.2025"
-    image_url: "https://picsum.photos/400/600"
-  
-  - name: "Сертификат соответствия"
-    number: "№77889"
-    valid_until: "05.10.2024"
-    image_url: "https://picsum.photos/400/600"
-  
-  - name: "Лицензия ФСБ"
-    number: "№10111"
-    valid_until: "22.01.2025"
-    image_url: "https://picsum.photos/400/600"
-  
-  - name: "Допуск СРО"
-    number: "№98765"
-    valid_until: "18.08.2026"
-    image_url: "https://picsum.photos/400/600"
-  
-  - name: "Сертификат дистрибьютора"
-    number: "№54321"
-    valid_until: "01.02.2025"
-    image_url: "https://picsum.photos/400/600"
-
+  - name: Сертификат соответствия
+    number: №12345
+    valid_until: 31.12.2024
+    image_url: https://picsum.photos/400/600
+  - name: Лицензия МЧС
+    number: №67890
+    valid_until: 15.06.2025
+    image_url: https://picsum.photos/400/600
+  - name: Сертификат дилера
+    number: №11223
+    valid_until: 20.11.2024
+    image_url: https://picsum.photos/400/600
+  - name: Сертификат ISO 9001
+    number: №BY/112 05.01. 003.01 01033
+    valid_until: 18.02.2027
+    image_url: /assets/images/uploads/сертификат-смк_19.02.2024_img_0.jpg
+  - name: Сертификат соответствия
+    number: №77889
+    valid_until: 05.10.2024
+    image_url: https://picsum.photos/400/600
+  - name: Лицензия ФСБ
+    number: №10111
+    valid_until: 22.01.2025
+    image_url: https://picsum.photos/400/600
+  - name: Допуск СРО
+    number: №98765
+    valid_until: 18.08.2026
+    image_url: https://picsum.photos/400/600
+  - name: Сертификат дистрибьютора
+    number: №54321
+    valid_until: 01.02.2025
+    image_url: https://picsum.photos/400/600
