@@ -15,10 +15,11 @@ certificates:
     number: №BY/112 05.01. 003.01 01033
     valid_until: 18.02.2027
     image_url: /assets/images/uploads/сертификат-смк_19.02.2024.jpg
-  - name: Сертификат соответствия
-    number: №77889
-    valid_until: 05.10.2024
-    image_url: https://picsum.photos/400/600
+  - name: Лицензия МЧС на осуществление деятельности по обеспечению пожарной
+      безопасности
+    number: №33130/3339
+    valid_until: н/н
+    image_url: /assets/images/uploads/аттестат_гп_2025.jpg
   - name: Лицензия ФСБ
     number: №10111
     valid_until: 22.01.2025
