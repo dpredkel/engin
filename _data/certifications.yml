@@ -20,15 +20,3 @@ certificates:
     number: №33130/3339
     valid_until: н/н
     image_url: /assets/images/uploads/лицензия_мчс_-на-2-л._страница_1.jpg
-  - name: Лицензия ФСБ
-    number: №10111
-    valid_until: 22.01.2025
-    image_url: https://picsum.photos/400/600
-  - name: Допуск СРО
-    number: №98765
-    valid_until: 18.08.2026
-    image_url: https://picsum.photos/400/600
-  - name: Сертификат дистрибьютора
-    number: №54321
-    valid_until: 01.02.2025
-    image_url: https://picsum.photos/400/600
