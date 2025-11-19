@@ -1,0 +1,66 @@
+# Home Page Content
+hero:
+  title: Инжиниринг систем безопасности
+  description: Комплексные решения: проектирование, внедрение и обслуживание. Защита вашего бизнеса на всех этапах.
+  primary_cta_text: Наши услуги
+  secondary_cta_text: Связаться с нами
+  background_image: https://lh3.googleusercontent.com/aida-public/AB6AXuAqxs09JWx7mXnvWCor8q80mhPxMhXL8FJVdYj2Mau4RkF28wHX1w6ZltLopYICsiXWnwRcSJ9XtlOsYxRKTPVxT-RpgrX0EguXCG4uFMIzYz3SmwTAqFPV1RXWDJaZEYQJ4QkpTHOb7yRQjx2DjhZVGZVzjgJw86GUoYryc9-nNsfMo6yR7cNabPlUcbeKIrC-tSzRF3nIAs4Nq3zBXgaWFFjZM8LVKp75KGWiLvg6ysXvH4BCqQWsvyJtEeIudt4S4YFM9IAwmaSe
+
+services_preview:
+  title: Ключевые услуги
+  subtitle: Полный спектр работ под нормативы СТБ/ГОСТ.
+  services:
+    - title: Проектирование систем безопасности
+      description: Индивидуальные проекты, адаптированные к объекту и требованиям.
+      image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuDgYuY2rbJJEWBwONHiEG0Ec4AYZ1_29YBdfQ7nYxRELzHS-3RVYMt4XEYaGRRDYxYc7ra7xjdgr5IMos20xkuiS1l-ZC3MIghpTWph_K-BzNAz8Qa1Np_munl0953TjRKI6pozAHetWOMZG-5MFmQGeU2f4-KvO1-4bhAtPMw7ZzDAl3GnuVmyFxXwk2-yvVcnKN_W5yKLJ5anqTAkQnNjbMBe-caiSREi4kBb3B6Q_MeksIzBvyQMNlw5SpvdTbTlslpfaVMUu-NX
+    - title: Монтаж и пусконаладка
+      description: Профессиональный монтаж и наладка с выдачей исполнительной документации.
+      image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuDnjRnaKe1YveHHD5KQfpJmF1G0zIRbvmhXlwrhb1uA-JPyz5EUmlu16EBmvHxcWKNvNshgyuvRYNb3Bs8DFnj84OdeY4JeXt_f0dNa1dKzoNgw8fsvIcTWlMCaRnnTSt1-mNCdjue0nKC9mS03SFSmh6UHEdSFPYqsch_V7iuaUUwXJMdBjqKMASMATUDcWlsBo7TxvUi63XVSBtG3PQn8dY1p9QVfsp8UD6zWCNzNjNpk39VnmXzGgiGN5eY2Kn4A9q6ME-jSOMIi
+    - title: Техническое обслуживание
+      description: Регламентные работы и аварийная поддержка, контроль SLA.
+      image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuABgYnHPP0DDCtqdhsg9KOaauM8rtxx-tyR5T747jv8cj8pfUQpLALHBMmdrThIIlYtEobsxUCyT6ujSxZwbsHBUJT17zLRfSdtVy3htr_icxkYbNDYj3jng8Yg9tmlwo-gPtshA-l5a0Q7JDtfabI0K1SFkhJzxcJfn-AiOU-iNSieBESR3B2DotS9XOBa_j6aSfakzsg8vjTh1YyqkpTev-_257PCIoqH8k3PIXm2ygVZ1MwwliNZXTGDWMXs_CA4k-PcFkPu-Tfu
+
+advantages:
+  title: Наши преимущества
+  subtitle: Высокий стандарт качества и прозрачные процессы.
+  items:
+    - title: Более 10 лет опыта
+    - title: Соответствие СТБ и ГОСТ
+    - title: Соблюдение сроков
+    - title: Прозрачные сметы
+    - title: Поддержка при проверках
+
+projects_preview:
+  title: Наши проекты
+  subtitle: Примеры успешно реализованных объектов.
+  projects:
+    - title: Безопасность офисного здания
+      description: Комплексная система безопасности для современного бизнеса.
+      image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuDmF4KBTwAAAQ9UUevWnBDZvPr9rmUFBUzJxnwwW-oCl8za06VLf50yTGC5wpPWy4IQuQEDev5zctik5rBo9gC4VIWTmjiLOZN6-RfVHTmbbHkEOorl9oFL1LOT7YHAGg1XLoZyWN33aR5K5ng_cshySquNdFYagJB36FhSpRapoicaiu7qoqo8PzyS0KmyfD1bb8n81SX_uWniDpoxD_uNQDApXMinEUnhjECdAc_ZBBg84Epz7XZHesMbHLDYoi8-mepKbnu4X2CV
+    - title: Промышленный объект
+      description: Передовые решения для сложной инфраструктуры.
+      image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuC4SO6q5RvPMiVMrtNLJSeGqMcDyGTqNxNFQrL_qlK3t0xy-1_U8NMMqdQF-brdFYM5Lc6d3DHSqxJGTLxM6Y4k1tYMij9ccGrtZ8bNR9I7enr8y61xUwMxmwL9MIMA_7H9HI3bojqsJRFx4hvmIGoMPRXV2fs_n8H3btWxP19m-ni3JQm8U5iUyPczaIk_xOuCEiPlJOy0_hL6b575iZuz-Vu_m_YffGmDcK1djF8P8v7Y14CcZPpPM3b2kHceJwRtUvIMPeSp890V
+    - title: Жилой комплекс
+      description: Интегрированная система безопасности «под ключ».
+      image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuBz8RgMxdtbXr5-cSyprSmLOiE6EshVK1JIcl7KGQYaiVcLhAiEN-JYkx8yBSGsMkfVCQnTmFSN4xJziJjAhtn31EE1m3REw6dI1hleQvVGYafQ-g5JjA3J2F8LgzHFyxqppPrjQcCbL_1ZHyvasKUhG0eFT1rC3mN0Iok3hurURTJyPmIhSQKwTlrAtRLCmlVDVhfAvEHYXcGyJZFTF7m2VZoX78nL4WMwVkgmYz92dViOR_Kty1pFVzhr2M6NJoLwe3wM5aNWTLLn
+
+certificates_partners:
+  title: Сертификаты и партнёры
+  subtitle: Гарантия качества и надёжности.
+  logos:
+    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuD6UfUGek3kNF_Y5TWEFIDD2fQWXrBKI1ceslzXwHeEnkWVHoj3M29r-ybRcYIJD-7TaJroXxok5a7NvysoIymS3QGDclP3seLZbRl_Yqo7o5iA5ZIFalWbOxxoKp-dSdenJOBUKLEl7J5voCHGHCplbga_4Rou9lrCmLlzTlfPPxNna9S7LlaMW53AT-tgpey8urZijJPCZ_dxsZa3oMH8wdevOqfc5X2xFuU3gfZ3-B4VfcXTBY3WRIMEh5QDoHdAC6STK4wg8vTn
+    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuAjyIzJJMW881xb6DN-EQDUMvFfOEWaz6f4ojvdcd4H-VMPSPreLBWaiNfpPJZuYNhu0-Q322H7vUw0U-YeSLSICFOBZ7xidUfY4jOMw4dUWORWVmJ7LzqClLAwf0XRzir16G4EjAui7MnL5Cp01jqisIPVvFqAfBxRe8gDWBSCwq9fpLzyoyTTx9r4xmUrrZNhLsb385b3HcHYu8rTtdb5JbgPs9a8jhRLLKAe4jDI_14tj3E-ScnotAu1e-2WsKgPGcPFiBpW3LN0
+    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuBlUxC7bjdDZ99TgjIm3HHdYfHUgQouDUvSYoOpbbTD_S7_ng5PZ-AZ0-SW15gMLa6pIfKuRw9vX6PUXzZBt-wVj2_rTbXj7qNKSB9phgQm6SHxgcimR19IjJSYUysFv8DOtH-nvi2-cMS5W8TPqKFlwM9s-APwrY0QD4rQhGOsvDQDmo_2d9CReO7Lb2s1amKWgCRlB9hmZr3QpYLLHkg1j81z4wE1bdWMZIaedyXbjyrFbM7P4qeuzb1NUVunvvhJBbEJCB37ZEN3
+    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuC34oc2c6xkgI3dJd7Q-Wz9H_4Qm-cI_LztSIttfUZ3ORCKZPs03Y1t3fVHNrJ_9WX4Jp7gjUkwsHyHWac3F4r2ZPqRQxwz1UcuKWAi8gon_-VgAgQb2AMcg5-cA7-11CGF6gqcVgcOJN7Ak8dm0FQy_WTcPASbDNrPnk_6vBMNBpsY0BRbR0rsal0dygKm1CxD2yb3nk9KQ78kwtzmUb598bcmLl9QmEVmpKAyHSnNYb_5o6QmuE1pLiElNQlzMEyP666w7nB_OWME
+    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuA1m9kLIs-CxXhj2kuyDA0p4k82GMh4IeO944enQYqYs6SfgKWb7U1SLvDWOLdbI-8jmBAgiyQ44Gp3R2UN__mcixpj1D4OtB2MGDYU4S7-WymnLaIEyotiY-orMQCXCjrIP3H3hVT4Uc0kmJB8pgXw8L91700mjqVpwDMUwgDcvor66tevf9UI67nwq6cYZfOb1dDZyRn942egGoENyyi-2a6ctQJ3W108VZaqPsNCKPTieYXRZA-6WhEIp2PifvQTD6Q4SVLzASTp
+    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuDz40WXZ-RMuC_-KxpW2Y4MIbctY_GE1BaLv2EDNP39wRqO7SBAJPo2R09yUXaIjarNWO6KVQTv-sncqDFYRyx_xP-E1w2bdDamNJQRoA9c5_oKrSeJ0CSfpb6B74zF4SB8DnCYhDgk1gZkiTC4Rx3wfE4FFS3Jlmst-WmQ7kjIdbr6QSMEzxy6f2PRxVwox5F3HCtyBmPlgMhl1-Vm0tGLA2mfXDZKD5Em0bkglHsA-QxC3MESKCVxJbKWbfyXHtbn7aUD96UMEh5e
+
+contact_teaser:
+  title: Готовы к диалогу? - Свяжитесь с нами
+  description: Ответим на любые вопросы и подготовим КП.
+  address: г. Минск, ул. Примерная, 1, офис 101
+  phone: +375 (29) 000-00-00
+  email: info@securitysystems.com
+  cta_text: Открыть форму
+  image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuAD2B6dWLBfivbyN6nE-9eLV1ch2v3yrsdVm-Lng3mO_zBQ9rDGRnxyU5ETPb1jX40DTCltya9NOm-ghR-F1IbgnxDHA9LdLhWAsx-RDkRSgXNKVvJac2_b6Th67pmEQXq-MmTKpdn5ci9qQY6nuXaJZ0Yz3NV4sB0D2tSCMUVb5AXeZh5d3kW38O2E1kqe1LJQm8RRXHwIIxD_ZRJOLl5okOpgNASY8eF7oEX3mSEBUt6eCzEdJAH4G9YkuFUtyPnqkXnE-SjUjY3N
+
