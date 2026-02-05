@@ -74,12 +74,10 @@ certificates_partners:
   title: Сертификаты и партнёры
   subtitle: Гарантия качества и надёжности.
   logos:
-    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuD6UfUGek3kNF_Y5TWEFIDD2fQWXrBKI1ceslzXwHeEnkWVHoj3M29r-ybRcYIJD-7TaJroXxok5a7NvysoIymS3QGDclP3seLZbRl_Yqo7o5iA5ZIFalWbOxxoKp-dSdenJOBUKLEl7J5voCHGHCplbga_4Rou9lrCmLlzTlfPPxNna9S7LlaMW53AT-tgpey8urZijJPCZ_dxsZa3oMH8wdevOqfc5X2xFuU3gfZ3-B4VfcXTBY3WRIMEh5QDoHdAC6STK4wg8vTn
-    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuAjyIzJJMW881xb6DN-EQDUMvFfOEWaz6f4ojvdcd4H-VMPSPreLBWaiNfpPJZuYNhu0-Q322H7vUw0U-YeSLSICFOBZ7xidUfY4jOMw4dUWORWVmJ7LzqClLAwf0XRzir16G4EjAui7MnL5Cp01jqisIPVvFqAfBxRe8gDWBSCwq9fpLzyoyTTx9r4xmUrrZNhLsb385b3HcHYu8rTtdb5JbgPs9a8jhRLLKAe4jDI_14tj3E-ScnotAu1e-2WsKgPGcPFiBpW3LN0
-    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuBlUxC7bjdDZ99TgjIm3HHdYfHUgQouDUvSYoOpbbTD_S7_ng5PZ-AZ0-SW15gMLa6pIfKuRw9vX6PUXzZBt-wVj2_rTbXj7qNKSB9phgQm6SHxgcimR19IjJSYUysFv8DOtH-nvi2-cMS5W8TPqKFlwM9s-APwrY0QD4rQhGOsvDQDmo_2d9CReO7Lb2s1amKWgCRlB9hmZr3QpYLLHkg1j81z4wE1bdWMZIaedyXbjyrFbM7P4qeuzb1NUVunvvhJBbEJCB37ZEN3
-    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuC34oc2c6xkgI3dJd7Q-Wz9H_4Qm-cI_LztSIttfUZ3ORCKZPs03Y1t3fVHNrJ_9WX4Jp7gjUkwsHyHWac3F4r2ZPqRQxwz1UcuKWAi8gon_-VgAgQb2AMcg5-cA7-11CGF6gqcVgcOJN7Ak8dm0FQy_WTcPASbDNrPnk_6vBMNBpsY0BRbR0rsal0dygKm1CxD2yb3nk9KQ78kwtzmUb598bcmLl9QmEVmpKAyHSnNYb_5o6QmuE1pLiElNQlzMEyP666w7nB_OWME
-    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuA1m9kLIs-CxXhj2kuyDA0p4k82GMh4IeO944enQYqYs6SfgKWb7U1SLvDWOLdbI-8jmBAgiyQ44Gp3R2UN__mcixpj1D4OtB2MGDYU4S7-WymnLaIEyotiY-orMQCXCjrIP3H3hVT4Uc0kmJB8pgXw8L91700mjqVpwDMUwgDcvor66tevf9UI67nwq6cYZfOb1dDZyRn942egGoENyyi-2a6ctQJ3W108VZaqPsNCKPTieYXRZA-6WhEIp2PifvQTD6Q4SVLzASTp
-    - image_url: https://lh3.googleusercontent.com/aida-public/AB6AXuDz40WXZ-RMuC_-KxpW2Y4MIbctY_GE1BaLv2EDNP39wRqO7SBAJPo2R09yUXaIjarNWO6KVQTv-sncqDFYRyx_xP-E1w2bdDamNJQRoA9c5_oKrSeJ0CSfpb6B74zF4SB8DnCYhDgk1gZkiTC4Rx3wfE4FFS3Jlmst-WmQ7kjIdbr6QSMEzxy6f2PRxVwox5F3HCtyBmPlgMhl1-Vm0tGLA2mfXDZKD5Em0bkglHsA-QxC3MESKCVxJbKWbfyXHtbn7aUD96UMEh5e
+    - image_url: /assets/images/uploads/лицензия_мчс_-на-2-л._страница_1.jpg
+    - image_url: /assets/images/uploads/аттестат_гп_2025.jpg
+    - image_url: /assets/images/uploads/аттестат_пр_2025.jpg
+    - image_url: /assets/images/uploads/сертификат-смк_19.02.2024.jpg
 contact_teaser:
   title: Готовы к диалогу? - Свяжитесь с нами
   description: Ответим на любые вопросы и подготовим предложение.
